@@ -18,7 +18,7 @@ function NavSearchMenu() {
         <a className="no-underline block h-5">
           <img src="./images/NOSIGNUP.tools.png" className="h-full" />
         </a>
-        <div className="items-center flex">
+        <div className="items-center ">
           <Button
             text="Suggest A Tool"
             link="https://airtable.com/shrkB7Vo1eklM96Jq"

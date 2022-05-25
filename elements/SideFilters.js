@@ -36,7 +36,7 @@ function SideFilters() {
           filtersOpen ? "flex" : "hidden"
         } absolute left-0 px-6 lg:px-auto bg-white w-full lg:w-auto z-50 mt-10 lg:mt-0 lg:sticky top-0 pt-6 pb-24 lg:flex flex-col lg:max-h-screen`}
       >
-        <div className="flex-1 lg:overflow-y-scroll">
+        <div className="flex-1">
           <div className="border-b border-gray-300 py-6">
             <div
               className="flex items-center justify-between cursor-pointer"
