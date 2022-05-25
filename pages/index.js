@@ -57,7 +57,12 @@ function ToolSearch({ initialTools }) {
                 <p>{fields.description}</p>
                 <div className="flex items-center mt-2 text-blue-400">
                   {[...Array(fields.rating)].map((e, i) => (
-                    <FontAwesomeIcon key={i} icon={faStar} className="mr-2" />
+                    <FontAwesomeIcon
+                      key={i}
+                      icon={faStar}
+                      width="16"
+                      className="mr-2"
+                    />
                   ))}
                   {fields.rating} out of 5 stars
                 </div>

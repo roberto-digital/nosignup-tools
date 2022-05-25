@@ -46,6 +46,7 @@ function SideFilters() {
               <FontAwesomeIcon
                 icon={sortOpen ? faChevronUp : faChevronDown}
                 className="text-blue-400 text-base"
+                width="16"
               />
             </div>
             {sortOpen && (
@@ -75,6 +76,7 @@ function SideFilters() {
               <FontAwesomeIcon
                 icon={categoryOpen ? faChevronUp : faChevronDown}
                 className="text-blue-400 text-base"
+                width="16"
               />
             </div>
             {categoryOpen && CategoryChecks}
