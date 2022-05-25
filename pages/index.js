@@ -90,7 +90,7 @@ function ToolSearch({ initialTools }) {
               You Can Use in 10 Seconds
             </h1>
             <h3 className="text-xl text-center font-light mt-4">
-              Nosignup.tools is a curated list of free web apps that don't
+              Nosignup.tools is a curated list of free web apps that do not
               require login or signup
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
