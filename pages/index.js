@@ -93,7 +93,7 @@ function ToolSearch({ initialTools }) {
               Nosignup.tools is a curated list of free web apps that do not
               require login or signup
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 3xl:grid-cols-8 gap-6 mt-16">
+            <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
               {AllTools}
             </div>
           </div>
