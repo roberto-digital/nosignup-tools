@@ -41,7 +41,7 @@ function ToolSearch({ initialTools }) {
 
   const AllTools = tools
     .slice(pagination.start, pagination.perPage)
-    .map((t) => {
+    .map((t, index) => {
       const { fields } = t;
 
       if (fields.approved) {
@@ -88,16 +88,58 @@ function ToolSearch({ initialTools }) {
             <Alert content="No Signup Tools lists free tools that don't require registration." />
           )}
           <div className="mt-12">
-            <h1 className="text-4xl text-center font-bold">
+            <h1 className="text-5xl text-center font-black">
               Discover The Best No-Signup Tools <br />
-              You Can Use in 10 Seconds
+              You Can Use in 10 Seconds{" "}
+              <span className="italic underline">or less</span>
             </h1>
-            <h3 className="text-xl text-center font-light mt-4">
-              Nosignup.tools is a curated list of free web apps that do not
-              require login or signup
+            <h3 className="text-2xl text-center font-light mt-4">
+              Nosignup.tools is a curated list of free web apps that don&apos;t
+              require registration or login
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
               {AllTools}
+              <div className="grid grid-cols-1 mx-auto">
+                <a
+                  href="https://appsumo.8odi.net/c/3467082/1358420/7443"
+                  target="_top"
+                  id="1358420"
+                >
+                  <img
+                    src="//a.impactradius-go.com/display-ad/7443-1358420"
+                    border="0"
+                    alt=""
+                    width="300"
+                    height="250"
+                    className="mb-4"
+                  />
+                </a>
+                <img
+                  height="0"
+                  width="0"
+                  src="https://appsumo.8odi.net/i/3467082/1358420/7443"
+                  border="0"
+                />
+                <a
+                  href="https://appsumo.8odi.net/c/3467082/1357601/7443"
+                  target="_top"
+                  id="1357601"
+                >
+                  <img
+                    src="//a.impactradius-go.com/display-ad/7443-1357601"
+                    border="0"
+                    alt=""
+                    width="300"
+                    height="250"
+                  />
+                </a>
+                <img
+                  height="0"
+                  width="0"
+                  src="https://appsumo.8odi.net/i/3467082/1357601/7443"
+                  border="0"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -106,7 +148,6 @@ function ToolSearch({ initialTools }) {
       <PaginationBoxes
         numberOfPages={numberOfPages}
         navigateToPage={navigateToPage}
-        tools={tools}
       />
       <Footer />
     </div>

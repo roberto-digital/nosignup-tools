@@ -19,10 +19,7 @@ function NavSearchMenu() {
           <img src="./images/NOSIGNUP.tools.png" className="h-full" />
         </a>
         <div className="items-center ">
-          <Button
-            text="Suggest A Tool"
-            link="https://airtable.com/shrkB7Vo1eklM96Jq"
-          />
+          <Button text="Submit" link="https://airtable.com/shrkB7Vo1eklM96Jq" />
         </div>
       </div>
       <div className="w-full mx-auto mt-2 mb-4 sm:mx-0 sm:mb-0 sm:mt-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:w-1/2 sm:h-full justify-center items-center block sm:flex">

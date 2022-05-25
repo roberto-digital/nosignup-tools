@@ -18,6 +18,10 @@ const getMinifiedRecord = (record) => {
     record.fields.rating = 3;
   }
 
+  if (!record.fields.category) {
+    record.fields.category = "Utility";
+  }
+
   if (!record.fields.featured) {
     record.fields.featured = false;
   }

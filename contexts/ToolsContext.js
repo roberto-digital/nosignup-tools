@@ -87,8 +87,12 @@ const ToolsProvider = ({ children }) => {
     const { textSearch, categoryFilters, sortFilter } = filter;
     let result = tools;
     if (textSearch) {
-      result = result.filter((item) =>
-        item.fields.name.toLowerCase().startsWith(textSearch.toLowerCase())
+      result = result.filter(
+        (item) =>
+          item.fields.name.toLowerCase().includes(textSearch.toLowerCase()) ||
+          item.fields.description
+            .toLowerCase()
+            .includes(textSearch.toLowerCase())
       );
     }
     if (categoryFilters.length) {
