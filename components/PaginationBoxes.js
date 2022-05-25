@@ -7,7 +7,7 @@ function PaginationBoxes({ numberOfPages, navigateToPage }) {
 
   if (numberOfPages <= 1) return null;
   return (
-    <div className="flex-1 flex flex-wrap item-center justify-center">
+    <div className="flex-1 flex flex-wrap item-center justify-center mb-4">
       {pagination.page > 2 && (
         <div>
           <a

@@ -99,11 +99,13 @@ function ToolSearch({ initialTools }) {
           </div>
         </div>
       </div>
+
       <PaginationBoxes
         numberOfPages={numberOfPages}
         navigateToPage={navigateToPage}
         tools={tools}
       />
+      <Footer />
     </div>
   );
 }
