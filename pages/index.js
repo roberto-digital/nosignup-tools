@@ -1,5 +1,8 @@
 import React, { useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 
@@ -57,12 +60,7 @@ function ToolSearch({ initialTools }) {
                 <p>{fields.description}</p>
                 <div className="flex items-center mt-2 text-blue-400">
                   {[...Array(fields.rating)].map((e, i) => (
-                    <FontAwesomeIcon
-                      key={i}
-                      icon={faStar}
-                      width="16"
-                      className="mr-2"
-                    />
+                    <FontAwesomeIcon key={i} icon={faStar} className="mr-2" />
                   ))}
                   {fields.rating} out of 5 stars
                 </div>
