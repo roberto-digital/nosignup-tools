@@ -16,8 +16,16 @@ import PaginationBoxes from "../components/PaginationBoxes";
 import { ToolsContext } from "../contexts/ToolsContext";
 
 function ToolSearch({ initialTools }) {
-  const { alerts, tools, setTools, pagination, setPagination, setCategories } =
-    useContext(ToolsContext);
+  const {
+    alerts,
+    loading,
+    setLoading,
+    tools,
+    setTools,
+    pagination,
+    setPagination,
+    setCategories,
+  } = useContext(ToolsContext);
 
   useEffect(() => {
     const initialCategories = initialTools
@@ -46,29 +54,31 @@ function ToolSearch({ initialTools }) {
 
       if (fields.approved) {
         return (
-          <SimpleCard
-            key={fields.name}
-            image={fields.screenshot}
-            className="mx-auto h-full hover:border-gray-400 transform transition-all duration-200 ease hover:-translate-y-1 shadow-sm"
-            html={
-              <div className="text-sm">
-                <span className=" bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
-                  {fields.category}
-                </span>
+          <>
+            <SimpleCard
+              key={fields.name}
+              image={fields.screenshot}
+              className="mx-auto h-full hover:border-gray-400 transform transition-all duration-200 ease hover:-translate-y-1 shadow-sm"
+              html={
+                <div className="text-sm">
+                  <span className=" bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
+                    {fields.category}
+                  </span>
 
-                <h3 className="mt-2 font-bold text-base">{fields.name}</h3>
-                <p>{fields.description}</p>
-                <div className="flex items-center mt-2 text-blue-400">
-                  {[...Array(fields.rating)].map((e, i) => (
-                    <FontAwesomeIcon key={i} icon={faStar} className="mr-2" />
-                  ))}
-                  {fields.rating} out of 5 stars
+                  <h3 className="mt-2 font-bold text-base">{fields.name}</h3>
+                  <p>{fields.description}</p>
+                  <div className="flex items-center mt-2 text-blue-400">
+                    {[...Array(fields.rating)].map((e, i) => (
+                      <FontAwesomeIcon key={i} icon={faStar} className="mr-2" />
+                    ))}
+                    {fields.rating} out of 5 stars
+                  </div>
                 </div>
-              </div>
-            }
-            buttonLink={fields.url}
-            buttonText={`Try ${fields.name} `}
-          />
+              }
+              buttonLink={fields.url}
+              buttonText={`Try ${fields.name} `}
+            />
+          </>
         );
       } else {
         return null;
@@ -88,12 +98,12 @@ function ToolSearch({ initialTools }) {
             <Alert content="No Signup Tools lists free tools that don't require registration." />
           )}
           <div className="mt-12">
-            <h1 className="text-5xl text-center font-black">
+            <h1 className="text-2xl lg:text-5xl text-center font-black">
               Discover The Best No-Signup Tools <br />
               You Can Use in 10 Seconds{" "}
               <span className="italic underline">or less</span>
             </h1>
-            <h3 className="text-2xl text-center font-light mt-4">
+            <h3 className="text-md lg:text-2xl text-center font-light mt-4">
               Nosignup.tools is a curated list of free web apps that don&apos;t
               require registration or login
             </h3>

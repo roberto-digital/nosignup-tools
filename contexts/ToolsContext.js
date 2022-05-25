@@ -4,6 +4,7 @@ const ToolsContext = createContext();
 
 const ToolsProvider = ({ children }) => {
   const [tools, setTools] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
   const [pagination, setPagination] = useState({
     limit: 10,
@@ -119,6 +120,8 @@ const ToolsProvider = ({ children }) => {
   return (
     <ToolsContext.Provider
       value={{
+        loading,
+        setLoading,
         tools: filteredTools,
         setTools,
         categories,
