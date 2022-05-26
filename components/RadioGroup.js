@@ -29,7 +29,7 @@ function RadioGroup({
         name={name}
         value={r.value}
         type="radio"
-        className="appearance-none w-6 h-6 border border-gray-300 rounded-full outline-none cursor-pointer checked:bg-blue-400"
+        className="appearance-none w-6 h-6 border border-gray-900 rounded-full outline-none cursor-pointer checked:bg-gray-900"
         id={`${r.value}-${name}`}
         onChange={(e) => handleChange(e)}
         defaultChecked={r.checked}
@@ -43,7 +43,7 @@ function RadioGroup({
     <div className={finalClass} {...newProps}>
       {label && (
         <label
-          className={`mb-4 text-sm text-gray-600 inline-block ${
+          className={`mb-4 text-sm text-gray-900 inline-block ${
             hasError && "text-red-600"
           }`}
           htmlFor={name}
@@ -53,7 +53,7 @@ function RadioGroup({
       )}
       <div className={radiosWrapperClass}>{Radios}</div>
       {description && (
-        <span className="mt-2 text-gray-600 text-xs">{description}</span>
+        <span className="mt-2 text-gray-900 text-xs">{description}</span>
       )}
       {errorText && (
         <div className="bg-red-200 mt-2 py-2 px-4 text-xs text-red-600 rounded-sm">

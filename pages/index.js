@@ -64,11 +64,11 @@ function ToolSearch({ initialTools }) {
                     {fields.name}
                   </h2>
                   <div className="text-sm">
-                    <span className=" bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
+                    <span className=" bg-gray-100 text-gray-900 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-gray-900">
                       {fields.category}
                     </span>
                     <p className="mt-2">{fields.description}</p>
-                    <div className="flex items-center mt-2 text-blue-900">
+                    <div className="flex items-center mt-2 text-gray-900">
                       {[...Array(fields.rating)].map((e, i) => (
                         <FontAwesomeIcon
                           key={i}

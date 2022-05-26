@@ -20,7 +20,7 @@ function Button({
   else if (size === "xl") finalClass += " text-xl py-3 px-12";
   if (submit)
     finalClass +=
-      " text-white bg-blue-400 border-blue-400 hover:bg-blue-600 hover:border-blue-600";
+      " text-white bg-gray-400 border-gray-400 hover:bg-gray-600 hover:border-gray-600";
   else if (type === "primary")
     finalClass +=
       " text-white bg-blue-400 border-blue-400 hover:bg-blue-600 hover:border-blue-600";

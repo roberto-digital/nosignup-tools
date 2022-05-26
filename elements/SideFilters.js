@@ -45,7 +45,7 @@ function SideFilters() {
               <h5 className="text-sm font-bold">Sort</h5>
               <FontAwesomeIcon
                 icon={sortOpen ? faChevronUp : faChevronDown}
-                className="text-blue-400 text-base"
+                className="text-gray-400 text-base"
               />
             </div>
             {sortOpen && (
@@ -79,7 +79,7 @@ function SideFilters() {
               <h5 className="text-sm font-bold">Category</h5>
               <FontAwesomeIcon
                 icon={categoryOpen ? faChevronUp : faChevronDown}
-                className="text-blue-400 text-base"
+                className="text-gray-400 text-base"
               />
             </div>
             {categoryOpen && CategoryChecks}

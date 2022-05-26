@@ -10,7 +10,7 @@ function CheckboxGroup({
   ...newProps
 }) {
   const { handleChange } = useContext(ToolsContext);
-  const finalClass = `${className} appearance-none w-6 h-6 border border-gray-300 rounded-sm outline-none cursor-pointer checked:bg-blue-400`;
+  const finalClass = `${className} appearance-none w-6 h-6 border border-gray-900 rounded-sm outline-none cursor-pointer checked:bg-gray-900`;
   return (
     <div className="w-full flex items-center">
       <input
@@ -21,7 +21,7 @@ function CheckboxGroup({
         className={finalClass}
         {...newProps}
       />
-      <label className="ml-2 text-sm" htmlFor={name}>
+      <label className="ml-2 text-sm text-gray-900" htmlFor={name}>
         {label}
       </label>
     </div>
