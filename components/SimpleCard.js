@@ -27,7 +27,6 @@ function SimpleCard({
         </div>
       )}
       <div className="p-6">
-        {title && <h5 className="text-lg font-black">{title}</h5>}
         {text && <p className={`${title && "mt-2"}`}>{text}</p>}
         {html}
         {buttonText && (

@@ -61,18 +61,25 @@ function ToolSearch({ initialTools }) {
               title={fields.name}
               className="mx-auto h-full hover:border-gray-400 transform transition-all duration-200 ease hover:-translate-y-1 shadow-sm"
               html={
-                <div className="text-sm">
-                  <span className=" bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
-                    {fields.category}
-                  </span>
-                  <p>{fields.description}</p>
-                  <div className="flex items-center mt-2 text-blue-400">
-                    {[...Array(fields.rating)].map((e, i) => (
-                      <FontAwesomeIcon key={i} icon={faStar} className="mr-2" />
-                    ))}
-                    {fields.rating} out of 5 stars
+                <>
+                  <h2 className="text-lg font-black mb-2">{fields.name}</h2>
+                  <div className="text-sm">
+                    <span className=" bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
+                      {fields.category}
+                    </span>
+                    <p className="mt-2">{fields.description}</p>
+                    <div className="flex items-center mt-2 text-blue-400">
+                      {[...Array(fields.rating)].map((e, i) => (
+                        <FontAwesomeIcon
+                          key={i}
+                          icon={faStar}
+                          className="mr-2"
+                        />
+                      ))}
+                      {fields.rating} out of 5 stars
+                    </div>
                   </div>
-                </div>
+                </>
               }
               buttonLink={fields.url}
               buttonText={`Try ${fields.name} `}
