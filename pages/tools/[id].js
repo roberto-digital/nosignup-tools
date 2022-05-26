@@ -1,6 +1,3 @@
-import { table, minifyRecords } from "../api/utils/Airtable";
-import { getToolData } from "../api/getToolData";
-
 export default function Tool() {
   return <h1>Tool</h1>;
 }
