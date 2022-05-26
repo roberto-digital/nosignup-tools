@@ -58,6 +58,7 @@ function ToolSearch({ initialTools }) {
             <SimpleCard
               key={fields.name}
               image={fields.screenshot}
+              title={fields.name}
               className="mx-auto h-full hover:border-gray-400 transform transition-all duration-200 ease hover:-translate-y-1 shadow-sm"
               html={
                 <div className="text-sm">

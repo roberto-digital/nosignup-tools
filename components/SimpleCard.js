@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import Button from "./Button";
 
@@ -16,8 +17,13 @@ function SimpleCard({
   return (
     <div className={finalClass}>
       {image && (
-        <div className="w-full h-48">
-          <img src={image} className="w-full h-full object-cover" />
+        <div className="w-full h-48 relative">
+          <Image
+            objectFit="cover"
+            layout="fill"
+            src={image}
+            alt={`${title} screenshot`}
+          />
         </div>
       )}
       <div className="p-6">
