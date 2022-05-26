@@ -23,7 +23,7 @@ function SideFilters() {
     </FormGroup>
   ));
   return (
-    <div className="w-full lg:w-56 relative">
+    <div className="w-full h-full lg:w-56 relative">
       <div
         className="py-3 bg-white w-full flex items-center justify-center lg:hidden cursor-pointer font-bold"
         onClick={() => setFiltersOpen(!filtersOpen)}
@@ -34,7 +34,7 @@ function SideFilters() {
       <div
         className={`${
           filtersOpen ? "flex" : "hidden"
-        } absolute left-0 px-6 lg:px-auto bg-white w-full lg:w-auto z-50 mt-10 lg:mt-0 lg:sticky top-0 pt-6 pb-24 lg:flex flex-col lg:max-h-screen`}
+        } absolute left-0 px-6 lg:px-auto bg-white w-full lg:w-auto z-30 mt-10 lg:mt-0 lg:sticky top-0 pt-6 pb-24 lg:flex flex-col lg:max-h-screen`}
       >
         <div className="flex-1">
           <div className="border-b border-gray-300 py-6">
@@ -66,7 +66,7 @@ function SideFilters() {
               </FormGroup>
             )}
           </div>
-          <div className="border-b border-gray-300 py-6">
+          <div className="border-b border-gray-300 py-6 heigh">
             <div
               className="flex items-center justify-between cursor-pointer"
               onClick={() => setCategoryOpen(!categoryOpen)}

@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -97,7 +98,7 @@ function ToolSearch({ initialTools }) {
             <Alert content="No Signup Tools lists free tools that don't require registration." />
           )}
           <div className="mt-12">
-            <h1 className="text-3xl leading-none lg:text-5xl text-center font-black">
+            <h1 className="text-3xl leading-snug lg:text-5xl text-center font-black">
               Discover The Best No-Signup Tools <br />
               You Can Use in 10 Seconds{" "}
               <span className="italic underline">or less</span>

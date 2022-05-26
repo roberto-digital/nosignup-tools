@@ -7,7 +7,7 @@ const ToolsProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
   const [pagination, setPagination] = useState({
-    limit: 100,
+    limit: 10,
     total: tools.length,
     start: 0,
     page: 1,

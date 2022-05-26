@@ -1,5 +1,6 @@
 import { ToolsContext } from "../contexts/ToolsContext";
 import React, { useContext } from "react";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,10 +10,13 @@ function NavSearchMenu() {
   const { handleSearchQuery } = useContext(ToolsContext);
 
   return (
-    <div className="flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-white relative z-50">
+    <div className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-gray-700  z-50">
       <div className="h-20 w-full flex items-center justify-between sm:h-auto">
-        <a href="https://nosignup.tools" className="no-underline block h-5">
-          <img src="./images/NOSIGNUP.tools.png" className="h-full" />
+        <a
+          href="https://nosignup.tools"
+          className="no-underline block h-5 text-gray-100 font-bold text-xl  "
+        >
+          NOSIGNUP.tools
         </a>
         <div className="items-center ">
           <Button text="Submit" link="https://airtable.com/shrkB7Vo1eklM96Jq" />
