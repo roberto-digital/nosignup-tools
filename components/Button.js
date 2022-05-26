@@ -26,7 +26,7 @@ function Button({
       " text-white bg-blue-400 border-blue-400 hover:bg-blue-600 hover:border-blue-600";
   else if (type === "secondary")
     finalClass +=
-      " text-blue-400 bg-transparent border-blue-400 hover:bg-blue-400 hover:text-white";
+      " text-blue-900 bg-transparent border-blue-900 hover:bg-blue-900 hover:text-white";
   else if (type === "danger")
     finalClass +=
       " text-white bg-red-600 border-red-600 hover:bg-red-800 hover:border-red-800";

@@ -68,7 +68,7 @@ function ToolSearch({ initialTools }) {
                       {fields.category}
                     </span>
                     <p className="mt-2">{fields.description}</p>
-                    <div className="flex items-center mt-2 text-blue-400">
+                    <div className="flex items-center mt-2 text-blue-900">
                       {[...Array(fields.rating)].map((e, i) => (
                         <FontAwesomeIcon
                           key={i}

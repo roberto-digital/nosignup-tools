@@ -10,7 +10,7 @@ function NavSearchMenu() {
   const { handleSearchQuery } = useContext(ToolsContext);
 
   return (
-    <div className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-gray-700  z-50">
+    <div className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-blue-900  z-50">
       <div className="h-20 w-full flex items-center justify-between sm:h-auto">
         <a
           href="https://nosignup.tools"
@@ -19,7 +19,11 @@ function NavSearchMenu() {
           NOSIGNUP.tools
         </a>
         <div className="items-center ">
-          <Button text="Submit" link="https://airtable.com/shrkB7Vo1eklM96Jq" />
+          <Button
+            type="primary"
+            text="Submit"
+            link="https://airtable.com/shrkB7Vo1eklM96Jq"
+          />
         </div>
       </div>
       <div className="w-full mx-auto mt-2 mb-4 sm:mx-0 sm:mb-0 sm:mt-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:w-1/2 sm:h-full justify-center items-center block sm:flex">
