@@ -1,5 +1,4 @@
 import React, { useEffect, useContext } from "react";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -57,10 +56,13 @@ function ToolSearch({ initialTools }) {
               key={fields.name}
               image={fields.screenshot}
               title={fields.name}
+              featured={fields.featured}
               className="mx-auto h-full hover:border-gray-400 transform transition-all duration-200 ease hover:-translate-y-1 shadow-sm"
               html={
                 <>
-                  <h2 className="text-lg font-black mb-2">{fields.name}</h2>
+                  <h2 className="text-gray-900 text-lg font-black mb-2">
+                    {fields.name}
+                  </h2>
                   <div className="text-sm">
                     <span className=" bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
                       {fields.category}
@@ -98,12 +100,12 @@ function ToolSearch({ initialTools }) {
             <Alert content="No Signup Tools lists free tools that don't require registration." />
           )}
           <div className="mt-12">
-            <h1 className="text-3xl leading-snug lg:text-5xl text-center font-black">
+            <h1 className="text-3xl text-gray-900 leading-snug lg:text-5xl text-center font-black">
               Discover The Best No-Signup Tools <br />
               You Can Use in 10 Seconds{" "}
               <span className="italic underline">or less</span>
             </h1>
-            <h3 className="text-md lg:text-2xl text-center font-light mt-4">
+            <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
               Nosignup.tools is a curated list of free web apps that don&apos;t
               require registration or login
             </h3>
@@ -165,7 +167,7 @@ function ToolSearch({ initialTools }) {
 export async function getStaticProps() {
   try {
     const tools = await table
-      .select({ sort: [{ field: "created", direction: "desc" }] })
+      .select({ sort: [{ field: "featured", direction: "desc" }] })
       .firstPage();
     return {
       props: {

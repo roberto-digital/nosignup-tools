@@ -109,6 +109,9 @@ const ToolsProvider = ({ children }) => {
     if (sortFilter == "topRated-sort") {
       result = result.sort((a, b) => b.fields.rating - a.fields.rating);
     }
+    if (sortFilter == "featured-sort") {
+      result = result.sort((a, b) => b.fields.featured - a.fields.featured);
+    }
     if (sortFilter == "latest-sort") {
       result = tools;
     }
