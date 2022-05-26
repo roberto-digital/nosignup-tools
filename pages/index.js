@@ -65,8 +65,6 @@ function ToolSearch({ initialTools }) {
                   <span className=" bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
                     {fields.category}
                   </span>
-
-                  <h3 className="mt-2 font-bold text-base">{fields.name}</h3>
                   <p>{fields.description}</p>
                   <div className="flex items-center mt-2 text-blue-400">
                     {[...Array(fields.rating)].map((e, i) => (
@@ -165,7 +163,7 @@ function ToolSearch({ initialTools }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps() {
   try {
     const tools = await table
       .select({ sort: [{ field: "created", direction: "desc" }] })
