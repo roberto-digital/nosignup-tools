@@ -76,7 +76,6 @@ function ToolSearch({ initialTools }) {
                           className="mr-2"
                         />
                       ))}
-                      {fields.rating} out of 5 stars
                     </div>
                   </div>
                 </>
