@@ -4,14 +4,11 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import Head from "next/head";
 
 import { table, minifyRecords } from "./api/utils/Airtable";
-import NavSearchMenu from "../elements/NavSearchMenu";
 import SideFilters from "../elements/SideFilters";
 import Alert from "../components/Alert";
 import SimpleCard from "../components/SimpleCard";
-import Footer from "../components/Footer";
 import PaginationBoxes from "../components/PaginationBoxes";
 import { ToolsContext } from "../contexts/ToolsContext";
 
@@ -92,19 +89,15 @@ function ToolSearch({ initialTools }) {
     });
 
   return (
-    <div>
-      <Head>
-        <title>No Signup Tools</title>
-      </Head>
-      <NavSearchMenu />
-      <div className="w-full flex flex-col lg:flex-row lg:px-6">
+    <>
+      <div className="flex flex-col lg:flex-row lg:px-6">
         <SideFilters />
         <div className="flex-1 lg:pl-12 py-6 px-6 lg:px-0">
           {alerts && (
             <Alert content="No Signup Tools lists free tools that don't require registration." />
           )}
           <div className="mt-12">
-            <h1 className="text-2xl lg:text-5xl text-center font-black">
+            <h1 className="text-3xl leading-none lg:text-5xl text-center font-black">
               Discover The Best No-Signup Tools <br />
               You Can Use in 10 Seconds{" "}
               <span className="italic underline">or less</span>
@@ -160,13 +153,11 @@ function ToolSearch({ initialTools }) {
           </div>
         </div>
       </div>
-
       <PaginationBoxes
         numberOfPages={numberOfPages}
         navigateToPage={navigateToPage}
       />
-      <Footer />
-    </div>
+    </>
   );
 }
 

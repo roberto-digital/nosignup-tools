@@ -1,11 +1,7 @@
 import { ToolsContext } from "../contexts/ToolsContext";
 import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faQuestion,
-  faSearch,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "../components/Button";
 
@@ -15,7 +11,7 @@ function NavSearchMenu() {
   return (
     <div className="flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-white relative z-50">
       <div className="h-20 w-full flex items-center justify-between sm:h-auto">
-        <a className="no-underline block h-5">
+        <a href="https://nosignup.tools" className="no-underline block h-5">
           <img src="./images/NOSIGNUP.tools.png" className="h-full" />
         </a>
         <div className="items-center ">

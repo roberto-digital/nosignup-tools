@@ -22,6 +22,8 @@ function SimpleCard({
             objectFit="cover"
             layout="fill"
             src={image}
+            placeholder="blur"
+            blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
             alt={`${title} screenshot`}
           />
         </div>
