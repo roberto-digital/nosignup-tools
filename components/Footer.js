@@ -31,7 +31,7 @@ export default function Footer() {
           <li>
             <a
               href="https://twitter.com/ckpleiser?ref_src=twsrc%5Etfw"
-              class="twitter-follow-button"
+              className="twitter-follow-button"
               data-show-count="false"
             >
               Follow @ckpleiser
