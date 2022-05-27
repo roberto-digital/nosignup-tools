@@ -3,7 +3,6 @@ import { ToolsContext } from "../contexts/ToolsContext";
 
 function PaginationBoxes({ numberOfPages, navigateToPage }) {
   const { pagination } = useContext(ToolsContext);
-  console.log(numberOfPages);
 
   if (numberOfPages <= 1) return null;
   return (
