@@ -31,7 +31,7 @@ function SimpleCard({
             {featured && (
               <div className="overflow-hidden h-full">
                 <div className="bg-blue-900 text-white font-bold origin-top float-right mt-9 mr-9 w-72 text-center transform translate-x-36 rotate-45">
-                  <div>Featured</div>
+                  <div>STAFF PICK</div>
                 </div>
               </div>
             )}
