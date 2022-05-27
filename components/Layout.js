@@ -9,6 +9,10 @@ export default function Layout({ children }) {
         <title>No Signup Tools</title>
         <meta property="og:title" content="No Signup Tools" key="title" />
         <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
+        <meta
           name="description"
           content="Nosignup.tools is a curated list of free web apps that don't require registration or login"
         />
