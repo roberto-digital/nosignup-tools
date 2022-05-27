@@ -12,7 +12,7 @@ import SimpleCard from "../components/SimpleCard";
 import PaginationBoxes from "../components/PaginationBoxes";
 import { ToolsContext } from "../contexts/ToolsContext";
 
-function ToolSearch({ initialTools }) {
+function ToolSearch({ initialTools, initialCategories }) {
   const {
     alerts,
     loading,
@@ -25,9 +25,6 @@ function ToolSearch({ initialTools }) {
   } = useContext(ToolsContext);
 
   useEffect(() => {
-    const initialCategories = initialTools
-      .map((tool) => tool.fields.category)
-      .filter((value, index, self) => self.indexOf(value) === index);
     setTools(initialTools);
     setCategories(initialCategories);
     navigateToPage(1);
@@ -168,9 +165,13 @@ export async function getStaticProps() {
     const tools = await table
       .select({ sort: [{ field: "featured", direction: "desc" }] })
       .firstPage();
+    const initialCategories = tools
+      .map((tool) => tool.fields.category)
+      .filter((value, index, self) => self.indexOf(value) === index);
     return {
       props: {
         initialTools: minifyRecords(tools),
+        initialCategories,
       },
     };
   } catch (err) {

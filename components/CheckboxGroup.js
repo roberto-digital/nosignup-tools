@@ -10,7 +10,7 @@ function CheckboxGroup({
   ...newProps
 }) {
   const { handleChange } = useContext(ToolsContext);
-  const finalClass = `${className} appearance-none w-6 h-6 border border-gray-900 rounded-sm outline-none cursor-pointer checked:bg-gray-900`;
+  const finalClass = `${className} appearance-none w-6 h-6 border border-blue-900 rounded-sm outline-none cursor-pointer checked:bg-blue-900`;
   return (
     <div className="w-full flex items-center">
       <input

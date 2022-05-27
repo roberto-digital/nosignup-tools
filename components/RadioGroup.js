@@ -29,7 +29,7 @@ function RadioGroup({
         name={name}
         value={r.value}
         type="radio"
-        className="appearance-none w-6 h-6 border border-gray-900 rounded-full outline-none cursor-pointer checked:bg-gray-900"
+        className="appearance-none w-6 h-6 border border-blue-900 rounded-full outline-none cursor-pointer checked:bg-blue-900"
         id={`${r.value}-${name}`}
         onChange={(e) => handleChange(e)}
         defaultChecked={r.checked}
