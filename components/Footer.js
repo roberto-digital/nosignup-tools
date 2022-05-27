@@ -10,7 +10,7 @@ export default function Footer() {
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-100">
             <span className="ml-3 text-xl font-bold">NOSIGNUP.tools</span>
           </a>
-          <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
+          <p className="text-sm text-gray-500 sm:mt-0 mt-4">
             <a
               href="https://twitter.com/ckpleiser?ref_src=twsrc%5Etfw"
               className="twitter-follow-button"
