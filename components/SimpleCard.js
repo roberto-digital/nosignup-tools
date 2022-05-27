@@ -8,6 +8,7 @@ function SimpleCard({
   image = "",
   title = "",
   text = "",
+  url = null,
   featured = false,
   buttonText = null,
   buttonLink = "",
@@ -51,6 +52,13 @@ function SimpleCard({
               />
             </div>
           )}
+          <div className="text-blue-900 text-xs text-left mt-3">
+            <a
+              href={`https://twitter.com/intent/tweet?text=I%20just%20found%20${url}%20on%20nosignup.tools`}
+            >
+              Share on Twitter{" "}
+            </a>
+          </div>
         </div>
       </div>
     </>

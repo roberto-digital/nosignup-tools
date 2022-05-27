@@ -53,6 +53,7 @@ function ToolSearch({ initialTools, initialCategories }) {
               key={fields.name}
               image={fields.screenshot}
               title={fields.name}
+              url={fields.url}
               featured={fields.featured}
               className="mx-auto h-full hover:border-gray-400 transform transition-all duration-200 ease hover:-translate-y-1 shadow-sm"
               html={

@@ -1,4 +1,5 @@
 import React from "react";
+import Script from "next/script";
 
 export default function Footer() {
   return (
@@ -28,9 +29,17 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a rel="noopener noreferrer" href="https://twitter.com/ckpleiser">
-              Follow me on Twitter
+            <a
+              href="https://twitter.com/ckpleiser?ref_src=twsrc%5Etfw"
+              class="twitter-follow-button"
+              data-show-count="false"
+            >
+              Follow @ckpleiser
             </a>
+            <Script
+              src="https://platform.twitter.com/widgets.js"
+              strategy="lazyOnload"
+            />
           </li>
         </ul>
       </div>
