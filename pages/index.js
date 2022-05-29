@@ -1,16 +1,13 @@
 import React, { useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-config.autoAddCss = false;
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-
+import { faStar, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { table, minifyRecords } from "./api/utils/Airtable";
 import SideFilters from "../elements/SideFilters";
 import Alert from "../components/Alert";
 import SimpleCard from "../components/SimpleCard";
 import PaginationBoxes from "../components/PaginationBoxes";
 import { ToolsContext } from "../contexts/ToolsContext";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 function ToolSearch({ initialTools, initialCategories }) {
   const {
@@ -28,7 +25,7 @@ function ToolSearch({ initialTools, initialCategories }) {
     setTools(initialTools);
     setCategories(initialCategories);
     navigateToPage(1);
-  }, [tools]);
+  }, []);
 
   const numberOfPages = Math.ceil(tools.length / pagination.limit);
 
@@ -54,19 +51,40 @@ function ToolSearch({ initialTools, initialCategories }) {
               image={fields.screenshot}
               title={fields.name}
               url={fields.url}
+              share={true}
               featured={fields.featured}
               className="mx-auto h-full hover:border-gray-400 transform transition-all duration-200 ease hover:-translate-y-1 shadow-sm"
               html={
                 <>
-                  <h2 className="text-gray-900 text-lg font-black mb-2">
-                    {fields.name}
-                  </h2>
+                  <div>
+                    <div className="flex mb-4 items-center justify-between">
+                      <span className="flex">
+                        <h2 className="text-gray-900 text-lg font-black">
+                          {fields.name}
+                        </h2>
+                      </span>
+                      <span className="flex pl-3 items-center">
+                        <a className=" text-gray-900 mr-1" href={fields.url}>
+                          <FontAwesomeIcon
+                            icon={faUpRightFromSquare}
+                            className="mr-2"
+                          />
+                        </a>
+                        <a
+                          className=" text-gray-900"
+                          href={`https://twitter.com/intent/tweet?text=I%20just%20found%20${fields.url}%20on%20nosignup.tools`}
+                        >
+                          <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+                        </a>
+                      </span>
+                    </div>
+                  </div>
                   <div className="text-sm">
                     <span className=" bg-gray-100 text-gray-900 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-gray-900">
                       {fields.category}
                     </span>
                     <p className="mt-2">{fields.description}</p>
-                    <div className="flex items-center mt-2 text-gray-900">
+                    <div className="flex items-center mt-2 text-blue-900">
                       {[...Array(fields.rating)].map((e, i) => (
                         <FontAwesomeIcon
                           key={i}
@@ -78,8 +96,6 @@ function ToolSearch({ initialTools, initialCategories }) {
                   </div>
                 </>
               }
-              buttonLink={fields.url}
-              buttonText={`Try ${fields.name} `}
             />
           </>
         );

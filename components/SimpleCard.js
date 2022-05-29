@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "./Button";
 
@@ -9,6 +10,7 @@ function SimpleCard({
   title = "",
   text = "",
   url = null,
+  share = false,
   featured = false,
   buttonText = null,
   buttonLink = "",
@@ -19,25 +21,27 @@ function SimpleCard({
   return (
     <>
       <div className={finalClass}>
-        {image && (
-          <div className="w-full h-48 relative">
-            <Image
-              objectFit="cover"
-              layout="fill"
-              src={image}
-              placeholder="blur"
-              blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
-              alt={`${title} screenshot`}
-            />
-            {featured && (
-              <div className="overflow-hidden h-full">
-                <div className="bg-blue-900 text-white font-bold origin-top float-right mt-9 mr-9 w-72 text-center transform translate-x-36 rotate-45">
-                  <div>STAFF PICK</div>
+        <Link href={`/tools/${title.toLowerCase().replace(/ /g, "-")}`}>
+          {image && (
+            <div className="w-full h-48 relative">
+              <Image
+                objectFit="cover"
+                layout="fill"
+                src={image}
+                placeholder="blur"
+                blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
+                alt={`${title} screenshot`}
+              />
+              {featured && (
+                <div className="overflow-hidden h-full">
+                  <div className="bg-blue-900 text-white font-bold origin-top float-right mt-9 mr-9 w-72 text-center transform translate-x-36 rotate-45">
+                    <div>STAFF PICK</div>
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
-        )}
+              )}
+            </div>
+          )}
+        </Link>
 
         <div className="p-6">
           {text && <p className={`${title && "mt-2"}`}>{text}</p>}
@@ -52,13 +56,6 @@ function SimpleCard({
               />
             </div>
           )}
-          <div className="text-blue-900 text-xs text-left mt-3">
-            <a
-              href={`https://twitter.com/intent/tweet?text=I%20just%20found%20${url}%20on%20nosignup.tools`}
-            >
-              Share on Twitter{" "}
-            </a>
-          </div>
         </div>
       </div>
     </>

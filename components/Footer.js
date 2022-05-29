@@ -4,7 +4,7 @@ import Button from "./Button";
 
 export default function Footer() {
   return (
-    <footer className="text-gray-900 body-font">
+    <footer className="text-gray-900 body-font w-full bottom-0">
       <div className="bg-blue-900">
         <div className="py-6 px-6 flex items-center justify-center sm:flex-row flex-col">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-100">
