@@ -23,7 +23,7 @@ function NavSearchMenu() {
         <div className="items-center ">
           <Button
             type="primary"
-            text="Suggest a tool"
+            text="Submit"
             link="https://airtable.com/shrkB7Vo1eklM96Jq"
           />
         </div>
