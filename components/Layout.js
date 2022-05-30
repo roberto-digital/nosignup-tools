@@ -26,7 +26,10 @@ export default function Layout({ children }) {
           property="og:description"
           content="Nosignup.tools is a curated list of free web apps that don't require registration or login"
         />
-        <meta property="og:image" content="" />
+        <meta
+          property="og:image"
+          content="./public/images/nosignup_tools.jpeg"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nosignup.tools" />
@@ -36,7 +39,10 @@ export default function Layout({ children }) {
           name="twitter:description"
           content="Nosignup.tools is a curated list of free web apps that don't require registration or login"
         />
-        <meta name="twitter:image" content="/images/nosignup_tools.jpeg" />
+        <meta
+          name="twitter:image"
+          content="./public/images/nosignup_tools.jpeg"
+        />
       </Head>
       <NavSearchMenu />
       <main className="flex-1 lg:pl-12 py-6 px-6 lg:px-0 justify-center align-center">
