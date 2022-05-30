@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>No Signup Tools</title>
-        <meta property="og:title" content="No Signup Tools" key="title" />
+        <meta property="og:title" content="No-Signup Tools" key="title" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1"
@@ -16,25 +16,25 @@ export default function Layout({ children }) {
 
         <meta
           name="description"
-          content="Nosignup.tools is a curated list of free web apps that don't require registration or login"
+          content="Free web apps that don't require registration or login"
         />
 
         <meta property="og:url" content="https://www.nosignup.tools/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="No Signup Tools" />
+        <meta property="og:title" content="No-Signup Tools" />
         <meta
           property="og:description"
-          content="Nosignup.tools is a curated list of free web apps that don't require registration or login"
+          content="Free web apps that don't require registration or login"
         />
         <meta property="og:image" content="/images/nosignup_tools.jpeg" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nosignup.tools" />
         <meta property="twitter:url" content="https://www.nosignup.tools/" />
-        <meta name="twitter:title" content="No Signup Tools" />
+        <meta name="twitter:title" content="No-Signup Tools" />
         <meta
           name="twitter:description"
-          content="Nosignup.tools is a curated list of free web apps that don't require registration or login"
+          content="Free web apps that don't require registration or login"
         />
         <meta name="twitter:image" content="/images/nosignup_tools.jpeg" />
       </Head>
