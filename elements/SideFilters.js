@@ -55,7 +55,7 @@ function SideFilters() {
                   radios={[
                     {
                       value: "featured",
-                      label: "Featured",
+                      label: "Staff Picks",
                       checked: true,
                     },
                     {
