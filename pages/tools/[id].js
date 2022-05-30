@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Tool({ toolData }) {
   const { tools } = useContext(ToolsContext);
 
-  const getSameCategoryTools = tools.filter(
+  const getSameCategoryTools = tools?.filter(
     (tool) =>
       tool.fields.category == toolData.fields.category &&
       tool.fields.name != toolData.fields.name

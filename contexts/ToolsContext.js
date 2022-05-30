@@ -7,8 +7,8 @@ const ToolsProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
   const [pagination, setPagination] = useState({
-    limit: 10,
-    total: tools.length,
+    limit: 12,
+    total: tools?.length,
     start: 0,
     page: 1,
     perPage: 10,
@@ -18,12 +18,21 @@ const ToolsProvider = ({ children }) => {
     showLastPageButton: false,
   });
 
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem("tools"))) {
+      setTools(JSON.parse(localStorage.getItem("tools")));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("tools", JSON.stringify(tools));
+  }, [tools]);
+
   const [filter, setFilter] = useState({
     textSearch: "",
     categoryFilters: [],
     sortFilter: "",
   });
-  const [alerts, setAlerts] = useState("");
 
   const handleChange = (e) => {
     const type = e.target.type;
@@ -134,7 +143,6 @@ const ToolsProvider = ({ children }) => {
         refreshTools,
         handleSearchQuery,
         handleChange,
-        alerts,
       }}
     >
       {children}

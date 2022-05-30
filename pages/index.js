@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { table, minifyRecords } from "./api/utils/Airtable";
 import SideFilters from "../elements/SideFilters";
-import Alert from "../components/Alert";
 import SimpleCard from "../components/SimpleCard";
 import PaginationBoxes from "../components/PaginationBoxes";
 import { ToolsContext } from "../contexts/ToolsContext";
@@ -11,7 +10,6 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 function ToolSearch({ initialTools, initialCategories }) {
   const {
-    alerts,
     loading,
     setLoading,
     tools,
@@ -109,9 +107,6 @@ function ToolSearch({ initialTools, initialCategories }) {
       <div className="flex flex-col lg:flex-row lg:px-6">
         <SideFilters />
         <div className="flex-1 lg:pl-12 py-6 px-6 lg:px-0">
-          {alerts && (
-            <Alert content="No Signup Tools lists free tools that don't require registration." />
-          )}
           <div className="mt-12">
             <h1 className="text-3xl text-gray-900 leading-snug lg:text-5xl text-center font-black">
               Discover The Best No-Signup Tools <br />
@@ -124,47 +119,7 @@ function ToolSearch({ initialTools, initialCategories }) {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
               {AllTools}
-              <div className="grid grid-cols-1 mx-auto">
-                <a
-                  href="https://appsumo.8odi.net/c/3467082/1358420/7443"
-                  target="_top"
-                  id="1358420"
-                >
-                  <img
-                    src="//a.impactradius-go.com/display-ad/7443-1358420"
-                    border="0"
-                    alt=""
-                    width="300"
-                    height="250"
-                    className="mb-4"
-                  />
-                </a>
-                <img
-                  height="0"
-                  width="0"
-                  src="https://appsumo.8odi.net/i/3467082/1358420/7443"
-                  border="0"
-                />
-                <a
-                  href="https://appsumo.8odi.net/c/3467082/1357601/7443"
-                  target="_top"
-                  id="1357601"
-                >
-                  <img
-                    src="//a.impactradius-go.com/display-ad/7443-1357601"
-                    border="0"
-                    alt=""
-                    width="300"
-                    height="250"
-                  />
-                </a>
-                <img
-                  height="0"
-                  width="0"
-                  src="https://appsumo.8odi.net/i/3467082/1357601/7443"
-                  border="0"
-                />
-              </div>
+              <div className="grid grid-cols-1 mx-auto"></div>
             </div>
           </div>
         </div>
