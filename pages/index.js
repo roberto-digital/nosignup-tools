@@ -114,11 +114,11 @@ function ToolSearch({ initialTools, initialCategories }) {
           <div className="mt-12">
             <h1 className="text-3xl text-gray-900 leading-snug lg:text-5xl text-center font-black">
               Discover The Best Free No-Signup Tools <br />
-              You Can Use in 10 Seconds.
+              You Can Use in 10 Seconds
             </h1>
             <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
               Nosignup.tools is a curated list of free web apps that don&apos;t
-              require registration or login <span>😎</span>
+              require registration or login <span>💻</span>
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
               {AllTools}
