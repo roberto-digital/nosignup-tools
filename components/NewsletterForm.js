@@ -31,19 +31,29 @@ const NewsletterForm = () => {
           Get one email per month with the latest web apps that don&apos;t
           require signup or registration. No spam ever. Promise.
         </p>
-        <div className="flex mt-12 mx-auto">
-          <input
-            onChange={(event) => setEmail(event?.target?.value ?? "")}
-            className="bg-gray-100 rounded-lg rounded-r-none text-base leading-none text-gray-800 focus:text-gray-900 dark:text-white p-5 w-4/5 border border-transparent focus:outline-none focus:border-gray-500"
-            type="email"
-            value={email}
-            placeholder="john.doe@gmail.com"
-          />
-
-          <Button onClick={subscribe} text="Get New Tools" size="xl" />
+        <div>
+          <div className="mt-10 flex justify-center mx-auto">
+            <input
+              onChange={(event) => setEmail(event?.target?.value ?? "")}
+              className="w-1/2 rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
+              placeholder="your@mail.com"
+            />
+            <button
+              onClick={subscribe}
+              className="px-8 rounded-r-lg bg-yellow-400  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r"
+            >
+              Subscribe
+            </button>
+          </div>
+          {state === "ERROR" && (
+            <p className="mt-2 text-center text-red-500">{errorMessage}</p>
+          )}
+          {state === "SUCCESS" && (
+            <p className="mt-2 text-center text-green-700">
+              Success! You've been added to our list.
+            </p>
+          )}
         </div>
-        {state === "ERROR" && <p>{errorMessage}</p>}
-        {state === "SUCCESS" && <p>Success!</p>}
       </div>
     </div>
   );
