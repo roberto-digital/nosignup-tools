@@ -50,7 +50,7 @@ const NewsletterForm = () => {
           )}
           {state === "SUCCESS" && (
             <p className="mt-2 text-center text-green-700">
-              Success! You've been added to our list.
+              Success! You&apos;ve been added to our list.
             </p>
           )}
         </div>
