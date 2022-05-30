@@ -41,7 +41,7 @@ export default function Layout({ children }) {
         />
         <meta
           name="twitter:image"
-          content="./public/images/nosignup_tools.jpeg"
+          content={"./public/images/nosignup_tools.jpeg"}
         />
       </Head>
       <NavSearchMenu />
