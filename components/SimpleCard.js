@@ -23,7 +23,7 @@ function SimpleCard({
       <div className={finalClass}>
         <Link href={`/tools/${title.toLowerCase().replace(/ /g, "-")}`}>
           {image && (
-            <div className="w-full h-48 relative">
+            <div className="w-full h-48 relative cursor-pointer">
               <Image
                 objectFit="cover"
                 layout="fill"
