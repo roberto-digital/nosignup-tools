@@ -1,5 +1,6 @@
 import NavSearchMenu from "../elements/NavSearchMenu";
 import Footer from "../components/Footer";
+import NewsletterForm from "./NewsletterForm";
 import Head from "next/head";
 
 export default function Layout({ children }) {
@@ -21,6 +22,7 @@ export default function Layout({ children }) {
       <main className="flex-1 lg:pl-12 py-6 px-6 lg:px-0 justify-center align-center">
         {children}
       </main>
+      <NewsletterForm />
       <Footer />
     </>
   );

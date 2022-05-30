@@ -25,6 +25,10 @@ function ToolSearch({ initialTools, initialCategories }) {
     navigateToPage(1);
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("tools", JSON.stringify(initialTools));
+  }, []);
+
   const numberOfPages = Math.ceil(tools.length / pagination.limit);
 
   const navigateToPage = (pageNumber) => {
