@@ -149,6 +149,7 @@ export async function getStaticProps() {
         initialTools: minifyRecords(tools),
         initialCategories,
       },
+      revalidate: 60,
     };
   } catch (err) {
     console.error(err);
