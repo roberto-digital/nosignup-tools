@@ -8,6 +8,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;900&display=swap"
           rel="stylesheet"
         />
+        <meta
+          name="google-site-verification"
+          content="2TMhWdzAQnM28WJEhoGRCh3daVck9lhUSIYbiCAdvq0"
+        />
       </Head>
       <body>
         <Main />
