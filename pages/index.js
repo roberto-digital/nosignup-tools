@@ -74,12 +74,6 @@ function ToolSearch({ initialTools, initialCategories }) {
                             className="mr-2"
                           />
                         </a>
-                        <a
-                          className=" text-gray-900"
-                          href={`https://twitter.com/intent/tweet?text=I%20just%20found%20${fields.url}%20on%20nosignup.tools`}
-                        >
-                          <FontAwesomeIcon icon={faTwitter} className="mr-2" />
-                        </a>
                       </span>
                     </div>
                   </div>
