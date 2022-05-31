@@ -4,9 +4,14 @@ import { table, minifyRecords } from "../api/utils/Airtable";
 import Button from "../../components/Button";
 import SimpleCard from "../../components/SimpleCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Head from "next/head";
+import {
+  faFacebook,
+  faTwitter,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Tool({ toolData }) {
   const { tools } = useContext(ToolsContext);
@@ -122,20 +127,29 @@ export default function Tool({ toolData }) {
                   </div>
                 </span>
                 <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200">
+                  <a className=" text-gray-900 mr-1" href={toolData.fields.url}>
+                    <FontAwesomeIcon
+                      icon={faUpRightFromSquare}
+                      className="mr-2"
+                    />
+                  </a>
                   <a
-                    className="ml-2 text-gray-500"
+                    className=" text-gray-900"
                     href={`https://twitter.com/intent/tweet?text=I%20just%20found%20${toolData.fields.url}%20on%20nosignup.tools`}
                   >
-                    <svg
-                      fill="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                    </svg>
+                    <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+                  </a>
+                  <a
+                    className=" text-gray-900"
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${toolData.fields.url}`}
+                  >
+                    <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+                  </a>
+                  <a
+                    className=" text-gray-900"
+                    href={`https://api.whatsapp.com/send?text=I found ${toolData.fields.url} on nosignup.tools via %0ahttps://www.nosignup.tools`}
+                  >
+                    <FontAwesomeIcon icon={faWhatsapp} className="mr-2" />
                   </a>
                 </span>
               </div>
