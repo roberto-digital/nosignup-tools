@@ -72,7 +72,7 @@ export default function Tool({ toolData }) {
           property="og:description"
           content={`${toolData.fields.description}`}
         />
-        <meta property="og:image" content="/images/nosignup_tools.jpeg" />
+        <meta property="og:image" content={`${toolData.fields.screenshot}`} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nosignup.tools" />
@@ -90,7 +90,7 @@ export default function Tool({ toolData }) {
           name="twitter:description"
           content={`${toolData.fields.description}`}
         />
-        <meta name="twitter:image" content="/images/nosignup_tools.jpeg" />
+        <meta name="twitter:image" content={`${toolData.fields.screenshot}`} />
       </Head>
       <section className="text-gray-700 body-font overflow-hidden  bg-white h-full">
         <Link href="/">
