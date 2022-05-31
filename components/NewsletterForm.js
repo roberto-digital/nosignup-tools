@@ -1,11 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
-import Button from "./Button";
+import { usePlausible } from "next-plausible";
 
 const NewsletterForm = () => {
   const [email, setEmail] = useState("");
   const [state, setState] = useState("IDLE");
   const [errorMessage, setErrorMessage] = useState(null);
+
+  const plausible = usePlausible();
 
   const subscribe = async () => {
     setState("LOADING");
@@ -14,6 +16,7 @@ const NewsletterForm = () => {
       const response = await axios.post("/api/newsletter", { email });
       setState("SUCCESS");
       setEmail("");
+      plausible("Newsletter Signup");
     } catch (e) {
       setErrorMessage(e.response.data.error);
       setState("ERROR");
