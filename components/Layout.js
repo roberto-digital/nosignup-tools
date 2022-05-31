@@ -1,6 +1,7 @@
 import NavSearchMenu from "../elements/NavSearchMenu";
 import Footer from "../components/Footer";
 import NewsletterForm from "./NewsletterForm";
+
 export default function Layout({ children }) {
   return (
     <>
