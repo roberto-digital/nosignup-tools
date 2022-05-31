@@ -2,7 +2,7 @@ import { ToolsContext } from "../contexts/ToolsContext";
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "../components/Button";
 
@@ -23,8 +23,9 @@ function NavSearchMenu() {
         <div className="items-center ">
           <Button
             type="primary"
-            text="Submit"
+            text="List a tool"
             link="https://airtable.com/shrkB7Vo1eklM96Jq"
+            icon={<FontAwesomeIcon icon={faPlus} />}
           />
         </div>
       </div>
