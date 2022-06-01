@@ -147,7 +147,7 @@ function ToolSearch({ initialTools, initialCategories }) {
             </h1>
             <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
               Nosignup.tools is a curated list of free web apps that don&apos;t
-              require registration or login <span>💻</span>
+              require registration or login <span>✌️</span>
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
               {AllTools}
