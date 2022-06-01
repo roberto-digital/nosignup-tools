@@ -19,7 +19,9 @@ function NavSearchMenu() {
           className="no-underline block h-5 text-gray-100 font-bold ml-3 text-xl  "
         >
           NOSIGNUP.tools
+          <span> 🇺🇦</span>
         </a>
+
         <div className="items-center ">
           <Button
             type="primary"
