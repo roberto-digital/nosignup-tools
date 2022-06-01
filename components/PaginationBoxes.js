@@ -34,7 +34,11 @@ function PaginationBoxes({ numberOfPages, navigateToPage }) {
           key={number}
           href="#"
           onClick={() => navigateToPage(i + 1)}
-          className="no-underline w-10 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-gray-400 rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
+          className={
+            pagination.page === i + 1
+              ? "bg-blue-900 text-white no-underline w-10 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-gray-400 rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
+              : "no-underline w-10 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-gray-400 rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
+          }
         >
           {i + 1}
         </a>
