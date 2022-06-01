@@ -43,7 +43,7 @@ const NewsletterForm = () => {
             />
             <button
               onClick={subscribe}
-              className="px-8 rounded-r-lg bg-yellow-400  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r"
+              className="px-4 xl:px-8 rounded-r-lg bg-yellow-400  text-gray-800 font-bold p-2 xl:p-4 uppercase border-yellow-500 border-t border-b border-r"
             >
               Keep me posted
             </button>

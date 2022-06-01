@@ -16,7 +16,7 @@ function NavSearchMenu() {
       <div className="h-20 w-full flex items-center justify-between sm:h-auto">
         <a
           href="https://nosignup.tools"
-          className="no-underline block h-5 text-gray-100 font-bold ml-3 text-xl  "
+          className="no-underline block h-5 text-gray-100 font-bold ml-3 text-md xl:text-xl "
         >
           NOSIGNUP.tools
           <span> 🇺🇦</span>
