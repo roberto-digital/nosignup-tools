@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }) {
           src="https://zink.tips/zwc.js?rid=6295f658be9816218b32a427&c=purple"
           strategy="lazyOnload"
         />
+        <Script src="https://tally.so/widgets/embed.js" />
       </ToolsProvider>
     </PlausibleProvider>
   );

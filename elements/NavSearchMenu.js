@@ -26,7 +26,7 @@ function NavSearchMenu() {
           <Button
             type="primary"
             text="List a tool"
-            link="https://airtable.com/shrkB7Vo1eklM96Jq"
+            link="https://tally.so#tally-open=nrjoKN&tally-layout=modal&tally-width=500&tally-emoji-text=👋&tally-emoji-animation=wave&tally-auto-close=3000"
             icon={<FontAwesomeIcon icon={faPlus} />}
           />
         </div>
