@@ -34,6 +34,10 @@ module.exports = {
       "10xl": "8rem",
     },
     extend: {
+      colors: {
+        lightblue: "#E7EDFF",
+        purple: "#311C93",
+      },
       spacing: {
         72: "18rem",
         84: "21rem",

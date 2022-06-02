@@ -1,5 +1,6 @@
 import { ToolsContext } from "../contexts/ToolsContext";
 import React, { useContext } from "react";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -12,14 +13,13 @@ function NavSearchMenu() {
   const router = useRouter();
 
   return (
-    <div className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-blue-900  z-50">
-      <div className="h-20 w-full flex items-center justify-between sm:h-auto">
+    <div className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-lightblue z-50">
+      <div className="h-20 w-full flex items-center justify-between sm:h-auto ">
         <a
           href="https://nosignup.tools"
-          className="no-underline block h-5 text-gray-100 font-bold ml-3 text-md xl:text-xl "
+          className="no-underline block text-gray-100 font-bold ml-3 text-md xl:text-xl flex"
         >
-          NOSIGNUP.tools
-          <span> 🇺🇦</span>
+          <Image src="/nosignup_logo.png" width="150%" height="50%" />
         </a>
 
         <div className="items-center ">
