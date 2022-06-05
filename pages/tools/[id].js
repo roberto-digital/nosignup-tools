@@ -4,7 +4,12 @@ import { table, minifyRecords } from "../api/utils/Airtable";
 import Button from "../../components/Button";
 import SimpleCard from "../../components/SimpleCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faHeart,
+  faUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
+import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
 import Head from "next/head";
 import {
@@ -14,7 +19,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Tool({ toolData }) {
-  const { tools } = useContext(ToolsContext);
+  const { tools, favourites, addFav, removeFav } = useContext(ToolsContext);
 
   const getSameCategoryTools = tools?.filter(
     (tool) =>
@@ -23,7 +28,7 @@ export default function Tool({ toolData }) {
   );
 
   const RecommendedTools = getSameCategoryTools.slice(0, 8).map((t, index) => {
-    const { fields } = t;
+    const { fields, id } = t;
 
     if (fields.approved) {
       return (
@@ -131,26 +136,52 @@ export default function Tool({ toolData }) {
                     <FontAwesomeIcon
                       icon={faUpRightFromSquare}
                       className="mr-2"
+                      size="xl"
                     />
                   </a>
                   <a
                     className=" text-gray-900"
                     href={`https://twitter.com/intent/tweet?text=I%20just%20found%20${toolData.fields.url}%20on%20nosignup.tools`}
                   >
-                    <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+                    <FontAwesomeIcon
+                      icon={faTwitter}
+                      size="xl"
+                      className="mr-2"
+                    />
                   </a>
                   <a
                     className=" text-gray-900"
                     href={`https://www.facebook.com/sharer/sharer.php?u=${toolData.fields.url}`}
                   >
-                    <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+                    <FontAwesomeIcon
+                      icon={faFacebook}
+                      size="xl"
+                      className="mr-2"
+                    />
                   </a>
                   <a
                     className=" text-gray-900"
                     href={`https://api.whatsapp.com/send?text=I found ${toolData.fields.url} on nosignup.tools via %0ahttps://www.nosignup.tools`}
                   >
-                    <FontAwesomeIcon icon={faWhatsapp} className="mr-2" />
+                    <FontAwesomeIcon
+                      icon={faWhatsapp}
+                      size="xl"
+                      className="mr-2"
+                    />
                   </a>
+                  {favourites && favourites.includes(toolData.id) ? (
+                    <span>
+                      <b onClick={() => removeFav(toolData.id)}>
+                        <FontAwesomeIcon size="xl" icon={faHeart} />
+                      </b>
+                    </span>
+                  ) : (
+                    <span>
+                      <b onClick={() => addFav(toolData.id)}>
+                        <FontAwesomeIcon size="xl" icon={farHeart} />
+                      </b>
+                    </span>
+                  )}
                 </span>
               </div>
               <p className="leading-relaxed">{toolData.fields.description}</p>

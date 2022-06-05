@@ -3,9 +3,12 @@ import { createContext, useState, useEffect } from "react";
 const ToolsContext = createContext();
 
 const ToolsProvider = ({ children }) => {
+  const initialFavourites = [];
   const [tools, setTools] = useState([]);
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
+  const [favourites, setFavourites] = useState(initialFavourites);
+
   const [pagination, setPagination] = useState({
     limit: 12,
     total: tools?.length,
@@ -19,8 +22,14 @@ const ToolsProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    if (JSON.parse(localStorage.getItem("tools"))) {
-      setTools(JSON.parse(localStorage.getItem("tools")));
+    const tools = JSON.parse(localStorage.getItem("tools"));
+    const favouriteData =
+      JSON.parse(localStorage.getItem("favourites")) || initialFavourites;
+    if (tools) {
+      setTools(tools);
+    }
+    if (favourites) {
+      setFavourites(favouriteData);
     }
   }, []);
 
@@ -28,11 +37,34 @@ const ToolsProvider = ({ children }) => {
     localStorage.setItem("tools", JSON.stringify(tools));
   }, [tools]);
 
+  useEffect(() => {
+    if (favourites !== initialFavourites) {
+      localStorage.setItem("favourites", JSON.stringify(favourites));
+    }
+  }, [favourites]);
+
+  const addFav = (id) => {
+    setFavourites([...favourites, id]);
+  };
+
+  const removeFav = (id) => {
+    setFavourites([...favourites.filter((found) => found !== id)]);
+  };
+
   const [filter, setFilter] = useState({
     textSearch: "",
     categoryFilters: [],
     sortFilter: "",
   });
+
+  const resetToPageOne = () => {
+    setPagination({
+      ...pagination,
+      page: 1,
+      start: 0,
+      perPage: pagination.limit,
+    });
+  };
 
   const handleChange = (e) => {
     const type = e.target.type;
@@ -47,6 +79,7 @@ const ToolsProvider = ({ children }) => {
           sortFilter: e.target.id,
         };
       });
+      resetToPageOne();
 
       // If checkbox, it's a category filter
     } else if (type == "checkbox") {
@@ -57,6 +90,7 @@ const ToolsProvider = ({ children }) => {
             categoryFilters: [...prevState.categoryFilters.concat(value)],
           };
         });
+        resetToPageOne();
       } else {
         setFilter((prevState) => {
           return {
@@ -66,6 +100,7 @@ const ToolsProvider = ({ children }) => {
             ),
           };
         });
+        resetToPageOne();
       }
     }
   };
@@ -110,6 +145,9 @@ const ToolsProvider = ({ children }) => {
         (item) => categoryFilters.indexOf(item.fields.category) !== -1
       );
     }
+    if (sortFilter == "myFavourites-sort") {
+      result = result.filter((item) => favourites.indexOf(item.id) !== -1);
+    }
     if (sortFilter == "atoz-sort") {
       result = result.sort((a, b) =>
         a.fields.name.localeCompare(b.fields.name)
@@ -138,6 +176,10 @@ const ToolsProvider = ({ children }) => {
         setTools,
         categories,
         setCategories,
+        favourites,
+        setFavourites,
+        addFav,
+        removeFav,
         pagination,
         setPagination,
         refreshTools,

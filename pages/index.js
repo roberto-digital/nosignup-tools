@@ -2,13 +2,17 @@ import React, { useEffect, useContext } from "react";
 import Head from "next/head";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faStar,
+  faUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
+import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
 import { table, minifyRecords } from "./api/utils/Airtable";
 import SideFilters from "../elements/SideFilters";
 import SimpleCard from "../components/SimpleCard";
 import PaginationBoxes from "../components/PaginationBoxes";
 import { ToolsContext } from "../contexts/ToolsContext";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 function ToolSearch({ initialTools, initialCategories }) {
   const {
@@ -19,6 +23,10 @@ function ToolSearch({ initialTools, initialCategories }) {
     pagination,
     setPagination,
     setCategories,
+    addFav,
+    favourites,
+    setFavourites,
+    removeFav,
     filter,
   } = useContext(ToolsContext);
 
@@ -46,13 +54,13 @@ function ToolSearch({ initialTools, initialCategories }) {
   const AllTools = tools
     .slice(pagination.start, pagination.perPage)
     .map((t, index) => {
-      const { fields } = t;
+      const { fields, id } = t;
 
       if (fields.approved) {
         return (
           <>
             <SimpleCard
-              key={fields.name}
+              key={id}
               image={fields.screenshot}
               title={fields.name}
               url={fields.url}
@@ -72,9 +80,23 @@ function ToolSearch({ initialTools, initialCategories }) {
                         <a className=" text-gray-900 mr-1" href={fields.url}>
                           <FontAwesomeIcon
                             icon={faUpRightFromSquare}
+                            size="lg"
                             className="mr-2"
                           />
                         </a>
+                        {favourites && favourites.includes(t.id) ? (
+                          <span>
+                            <b onClick={() => removeFav(id)}>
+                              <FontAwesomeIcon size="lg" icon={faHeart} />
+                            </b>
+                          </span>
+                        ) : (
+                          <span>
+                            <b onClick={() => addFav(id)}>
+                              <FontAwesomeIcon size="lg" icon={farHeart} />
+                            </b>
+                          </span>
+                        )}
                       </span>
                     </div>
                   </div>
@@ -139,27 +161,36 @@ function ToolSearch({ initialTools, initialCategories }) {
       </Head>
       <div className="flex flex-col lg:flex-row lg:px-6">
         <SideFilters />
-        <div className="flex-1 lg:pl-12 py-6 px-6 lg:px-0">
-          <div className="mt-12">
-            <h1 className="text-3xl text-gray-900 leading-snug lg:text-5xl text-center font-black">
-              Discover Free No-Signup Tools <br />
-              You Can Use in 10 Seconds
-            </h1>
-            <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
-              Nosignup.tools is a curated list of free web apps that don&apos;t
-              require registration or login <span>✌️</span>
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
-              {AllTools}
-              <div className="grid grid-cols-1 mx-auto"></div>
+        {AllTools.length > 0 ? (
+          <div className="flex-1 lg:pl-12 py-6 px-6 lg:px-0">
+            <div className="mt-12">
+              <h1 className="text-3xl text-gray-900 leading-snug lg:text-5xl text-center font-black">
+                Discover Free No-Signup Tools <br />
+                You Can Use in 10 Seconds
+              </h1>
+              <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
+                Nosignup.tools is a curated list of free web apps that
+                don&apos;t require registration or login <span>✌️</span>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
+                {AllTools}
+                <div className="grid grid-cols-1 mx-auto"></div>
+              </div>
             </div>
+            <PaginationBoxes
+              numberOfPages={numberOfPages}
+              navigateToPage={navigateToPage}
+            />
           </div>
-        </div>
+        ) : (
+          <div className="grid place-items-center h-screen text-center w-full">
+            <h4 className="text-3xl">
+              Nothing here yet. Go ahead and change the filters or add some
+              tools to your favourites.
+            </h4>
+          </div>
+        )}
       </div>
-      <PaginationBoxes
-        numberOfPages={numberOfPages}
-        navigateToPage={navigateToPage}
-      />
     </>
   );
 }

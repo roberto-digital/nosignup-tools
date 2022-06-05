@@ -54,6 +54,10 @@ function SideFilters() {
                   name="sort"
                   radios={[
                     {
+                      value: "myFavourites",
+                      label: "My Favourites",
+                    },
+                    {
                       value: "featured",
                       label: "Staff Picks",
                       checked: true,
