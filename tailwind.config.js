@@ -34,6 +34,10 @@ module.exports = {
       "10xl": "8rem",
     },
     extend: {
+      animation: {
+        bounce200: "bounce 1s infinite 200ms",
+        bounce400: "bounce 1s infinite 400ms",
+      },
       colors: {
         lightblue: "#E7EDFF",
         purple: "#311C93",
@@ -67,6 +71,7 @@ module.exports = {
       },
     },
   },
+
   variants: {
     borderWidth: ["responsive", "last", "hover", "focus"],
     boxShadow: {

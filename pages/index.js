@@ -11,6 +11,8 @@ import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
 import { table, minifyRecords } from "./api/utils/Airtable";
 import SideFilters from "../elements/SideFilters";
 import SimpleCard from "../components/SimpleCard";
+import Loader from "../components/Loader";
+import NewsletterForm from "../components/NewsletterForm";
 import PaginationBoxes from "../components/PaginationBoxes";
 import { ToolsContext } from "../contexts/ToolsContext";
 
@@ -31,9 +33,11 @@ function ToolSearch({ initialTools, initialCategories }) {
   } = useContext(ToolsContext);
 
   useEffect(() => {
+    setLoading(true);
     setTools(initialTools);
     setCategories(initialCategories);
     navigateToPage(1);
+    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -172,22 +176,29 @@ function ToolSearch({ initialTools, initialCategories }) {
                 Nosignup.tools is a curated list of free web apps that
                 don&apos;t require registration or login <span>✌️</span>
               </h3>
+              <NewsletterForm />
               <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
                 {AllTools}
                 <div className="grid grid-cols-1 mx-auto"></div>
               </div>
             </div>
-            <PaginationBoxes
-              numberOfPages={numberOfPages}
-              navigateToPage={navigateToPage}
-            />
+            <div>
+              <PaginationBoxes
+                numberOfPages={numberOfPages}
+                navigateToPage={navigateToPage}
+              />
+            </div>
           </div>
         ) : (
           <div className="grid place-items-center h-screen text-center w-full">
-            <h4 className="text-3xl">
-              Nothing here yet. Go ahead and change the filters or add some
-              tools to your favourites.
-            </h4>
+            {loading && favourites.length ? (
+              <Loader />
+            ) : (
+              <h1 className="text-3xl">
+                Nothing here yet. <span>❤️ </span>some tools to add to your
+                favourites.
+              </h1>
+            )}
           </div>
         )}
       </div>
