@@ -35,7 +35,7 @@ const NewsletterForm = () => {
             type="email"
             onChange={(event) => setEmail(event?.target?.value ?? "")}
             placeholder="Enter your email"
-            className="text-gray-500 w-full p-3 rounded-md border outline-none focus:border-yellow-500"
+            className="text-gray-500 w-full p-3 rounded-md border outline-none focus:border-blue-400"
           />
           <button
             onClick={subscribe}

@@ -12,7 +12,7 @@ function PaginationBoxes({ numberOfPages, navigateToPage }) {
           <a
             href="#"
             onClick={() => navigateToPage(1)}
-            className="no-underline w-20 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-gray-300 rounded-sm transition-colors duration-200 ease hover:border-blue-400 hover:text-gray-400"
+            className="no-underline w-20 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-purple rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
           >
             First
           </a>
@@ -23,7 +23,7 @@ function PaginationBoxes({ numberOfPages, navigateToPage }) {
           <a
             href="#"
             onClick={() => navigateToPage(pagination.page - 1)}
-            className="no-underline w-20 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-gray-400 rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
+            className="no-underline w-20 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-purple rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
           >
             Prev
           </a>
@@ -36,8 +36,8 @@ function PaginationBoxes({ numberOfPages, navigateToPage }) {
           onClick={() => navigateToPage(i + 1)}
           className={
             pagination.page === i + 1
-              ? "bg-blue-900 text-white no-underline w-10 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-gray-400 rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
-              : "no-underline w-10 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-gray-400 rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
+              ? "bg-purple text-white no-underline w-10 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-purple rounded-sm transition-colors duration-200 ease  "
+              : "no-underline w-10 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-purple rounded-sm transition-colors duration-200 ease  "
           }
         >
           {i + 1}
@@ -48,7 +48,7 @@ function PaginationBoxes({ numberOfPages, navigateToPage }) {
           <a
             href="#"
             onClick={() => navigateToPage(pagination.page + 1)}
-            className="no-underline w-20 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-gray-400 rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
+            className="no-underline w-20 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-purple rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
           >
             Next
           </a>
@@ -59,7 +59,7 @@ function PaginationBoxes({ numberOfPages, navigateToPage }) {
           <a
             href="#"
             onClick={() => navigateToPage(numberOfPages)}
-            className="no-underline w-20 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-gray-400 rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
+            className="no-underline w-20 h-12 mx-2 my-2 sm:my-0 flex justify-center items-center border border-purple rounded-sm transition-colors duration-200 ease hover:border-gray-400 hover:text-gray-400"
           >
             Last
           </a>

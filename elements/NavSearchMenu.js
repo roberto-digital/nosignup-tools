@@ -17,9 +17,9 @@ function NavSearchMenu() {
       <div className="h-20 w-full flex items-center justify-between sm:h-auto ">
         <a
           href="https://nosignup.tools"
-          className="no-underline block text-gray-100 font-bold ml-3 text-md xl:text-xl flex"
+          className="no-underline block text-purple font-bold ml-3 text-md xl:text-2xl flex"
         >
-          <Image src="/nosignup_logo.png" width="150%" height="50%" />
+          nosignup.tools
         </a>
 
         <div className="items-center ">
