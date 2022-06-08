@@ -29,7 +29,7 @@ const NewsletterForm = () => {
       <div className="mt-5">
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="items-center justify-center sm:flex"
+          className="items-center justify-center sm:flex "
         >
           <input
             type="email"
@@ -39,7 +39,7 @@ const NewsletterForm = () => {
           />
           <button
             onClick={subscribe}
-            className="w-full font-bold max-w-fit mt-3 px-5 py-3 rounded-md text-gray-800 bg-yellow-400 outline-none shadow-md focus:shadow-none focus:ring-2 ring-offset-2 ring-yellow-600 sm:mt-0 sm:ml-3"
+            className="w-full font-bold max-w-fit mt-3 px-5 py-3 rounded-md text-gray-800 bg-yellow-400 outline-none shadow-md focus:shadow-none focus:ring-2 ring-offset-2 ring-gray-900 sm:mt-0 sm:ml-3 "
           >
             Get Nosignup Tools
           </button>
