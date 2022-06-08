@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="text-gray-900 body-font w-full">
       <div className="bg-purple">
-        <div className="py-6 px-6 flex items-center justify-left sm:flex-row flex-col">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-100">
+        <div className="py-6 px-6 flex items-center justify-left sm:justify-center sm:flex-row flex-col">
+          <a className="flex title-font font-medium items-center justify-center text-gray-100">
             <span className="ml-3 text-xl font-bold">nosignup.tools</span>
           </a>
           <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
