@@ -1,10 +1,9 @@
 import React from "react";
 import Script from "next/script";
-import Button from "./Button";
 
 export default function Footer() {
   return (
-    <footer className="text-gray-900 body-font w-full bottom-0">
+    <footer className="text-gray-900 body-font w-full">
       <div className="bg-purple">
         <div className="py-6 px-6 flex items-center justify-left sm:flex-row flex-col">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-100">

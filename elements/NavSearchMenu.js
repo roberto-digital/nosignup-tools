@@ -13,7 +13,7 @@ function NavSearchMenu() {
   const router = useRouter();
 
   return (
-    <div className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-lightblue z-50">
+    <nav className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-lightblue z-50">
       <div className="h-20 w-full flex items-center justify-between sm:h-auto ">
         <a
           href="https://nosignup.tools"
@@ -47,7 +47,7 @@ function NavSearchMenu() {
           </form>
         </div>
       )}
-    </div>
+    </nav>
   );
 }
 
