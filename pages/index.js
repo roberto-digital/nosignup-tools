@@ -74,14 +74,17 @@ function ToolSearch({ initialTools, initialCategories }) {
               html={
                 <>
                   <div>
-                    <div className="flex mb-4 items-center justify-between">
+                    <div className="flex flex-wrap mb-4 items-center justify-between">
                       <span className="flex">
                         <h2 className="text-gray-900 text-lg font-black">
                           {fields.name}
                         </h2>
                       </span>
-                      <span className="flex pl-3 items-center">
-                        <a className=" text-gray-900 mr-1" href={fields.url}>
+                      <span className="flex items-center">
+                        <a
+                          className=" text-gray-900 m-auto mr-1"
+                          href={fields.url}
+                        >
                           <FontAwesomeIcon
                             icon={faUpRightFromSquare}
                             size="lg"
