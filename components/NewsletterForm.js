@@ -25,29 +25,38 @@ const NewsletterForm = () => {
   };
 
   return (
-    <div className="mx-auto w-full xl:w-7/12 xl:px-20 flex flex-col xl:items-stretch xl:flex-row justify-center">
-      <div className="mt-5 flex justify-center mx-auto w-auto">
-        <input
-          onChange={(event) => setEmail(event?.target?.value ?? "")}
-          className="w- rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
-          placeholder="your@mail.com"
-        />
-        <button
-          onClick={subscribe}
-          className="px-4 xl:px-8 rounded-r-lg bg-yellow-400  text-gray-800 font-bold p-2 xl:p-4 uppercase border-yellow-500 border-t border-b border-r"
+    <section className="max-w-2xl mt-6 mx-auto px-4">
+      <div className="mt-5">
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="items-center justify-center sm:flex"
         >
-          Keep me posted
-        </button>
-      </div>
-      {state === "ERROR" && (
-        <p className="mt-2 text-center text-red-500">{errorMessage}</p>
-      )}
-      {state === "SUCCESS" && (
-        <p className="mt-2 text-center text-green-700">
-          Success! You&apos;ve been added to our list.
+          <input
+            type="email"
+            onChange={(event) => setEmail(event?.target?.value ?? "")}
+            placeholder="Enter your email"
+            className="text-gray-500 w-full p-3 rounded-md border outline-none focus:border-yellow-500"
+          />
+          <button
+            onClick={subscribe}
+            className="w-full font-bold max-w-fit mt-3 px-5 py-3 rounded-md text-gray-800 bg-yellow-400 outline-none shadow-md focus:shadow-none focus:ring-2 ring-offset-2 ring-yellow-600 sm:mt-0 sm:ml-3"
+          >
+            Get Nosignup Tools
+          </button>
+        </form>
+        <p className="mt-3 mx-auto text-center max-w-lg text-[15px] text-gray-400">
+          We hate spam and promise to keep your email address safe
         </p>
-      )}
-    </div>
+        {state === "ERROR" && (
+          <p className="mt-2 text-center text-red-500">{errorMessage}</p>
+        )}
+        {state === "SUCCESS" && (
+          <p className="mt-2 text-center text-green-700">
+            Success! You&apos;ve been added to our list.
+          </p>
+        )}
+      </div>
+    </section>
   );
 };
 
