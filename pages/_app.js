@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
         <Layout>
           <Component {...pageProps} />
         </Layout>
-        <script
+        <Script
           data-name="BMC-Widget"
           data-cfasync="false"
           src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
           data-position="Right"
           data-x_margin="18"
           data-y_margin="18"
-        ></script>
+        />
         <Script src="https://tally.so/widgets/embed.js" />
       </ToolsProvider>
     </PlausibleProvider>
