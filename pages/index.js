@@ -92,9 +92,9 @@ function ToolSearch({ initialTools, initialCategories }) {
                           />
                         </a>
                         {favourites && favourites.includes(t.id) ? (
-                          <span>
+                          <span style={{ color: "red" }}>
                             <b onClick={() => removeFav(id)}>
-                              <FontAwesomeIcon size="lg" icon={faHeart} />
+                              <FontAwesomeIcon size="lg" icon={faHeart} beat />
                             </b>
                           </span>
                         ) : (

@@ -170,7 +170,7 @@ export default function Tool({ toolData }) {
                     />
                   </a>
                   {favourites && favourites.includes(toolData.id) ? (
-                    <span>
+                    <span style={{ color: "red" }}>
                       <b onClick={() => removeFav(toolData.id)}>
                         <FontAwesomeIcon size="xl" icon={faHeart} />
                       </b>
