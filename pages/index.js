@@ -76,9 +76,9 @@ function ToolSearch({ initialTools, initialCategories }) {
                   <div>
                     <div className="flex flex-wrap mb-4 items-center justify-between">
                       <span className="flex">
-                        <h2 className="text-gray-900 text-lg font-black">
+                        <h3 className="text-gray-900 text-lg font-black">
                           {fields.name}
-                        </h2>
+                        </h3>
                       </span>
                       <span className="flex items-center">
                         <a
@@ -198,10 +198,10 @@ function ToolSearch({ initialTools, initialCategories }) {
             {loading && favourites.length ? (
               <Loader />
             ) : (
-              <h1 className="text-3xl">
+              <h3 className="text-3xl">
                 Nothing here yet. <span>❤️ </span>some tools to add to your
                 favourites.
-              </h1>
+              </h3>
             )}
           </div>
         )}
