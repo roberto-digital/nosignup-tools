@@ -177,8 +177,8 @@ function ToolSearch({ initialTools, initialCategories }) {
                 ready to use in 10 seconds.
               </h1>
               <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
-                Join thousands of product enthusiasts and get the best no-signup
-                tools delivered to your inbox, once a month. <span>📩</span>
+                Join thousands of product enthusiasts who get our monthly
+                update. <span>📩</span>
               </h3>
               <NewsletterForm />
               <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
