@@ -108,11 +108,11 @@ function ToolSearch({ initialTools, initialCategories }) {
                     </div>
                   </div>
                   <div className="text-sm">
-                    <span className=" bg-gray-100 text-gray-900 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-gray-900">
+                    <span className=" text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-purple text-white">
                       {fields.category}
                     </span>
                     <p className="mt-2">{fields.description}</p>
-                    <div className="flex items-center mt-2 text-blue-900">
+                    <div className="flex items-center mt-2 text-purple">
                       {[...Array(fields.rating)].map((e, i) => (
                         <FontAwesomeIcon
                           key={i}

@@ -13,18 +13,18 @@ function NavSearchMenu() {
   const router = useRouter();
 
   return (
-    <nav className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-lightblue z-50">
+    <nav className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-purple z-50">
       <div className="h-20 w-full flex items-center justify-between sm:h-auto ">
         <a
           href="https://nosignup.tools"
-          className="no-underline block text-purple font-bold ml-3 text-md xl:text-2xl flex"
+          className="no-underline block text-white font-bold ml-3 text-md xl:text-2xl flex"
         >
           nosignup.tools
         </a>
 
         <div className="items-center ">
           <Button
-            type="primary"
+            type="outline"
             text="List a tool"
             link="https://tally.so#tally-open=nrjoKN&tally-layout=modal&tally-width=500&tally-emoji-text=👋&tally-emoji-animation=wave&tally-auto-close=3000"
             icon={<FontAwesomeIcon icon={faPlus} />}

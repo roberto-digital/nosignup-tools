@@ -39,6 +39,9 @@ function Button({
   else if (type === "light")
     finalClass +=
       " text-black bg-gray-200 border-gray-200 hover:bg-gray-400 hover:border-gray-400";
+  else if (type === "outline")
+    finalClass +=
+      " text-white border border-white hover:bg-white hover:text-purple font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150";
   else if (type === "dark")
     finalClass +=
       " text-white bg-gray-900 border-gray-900 hover:bg-black hover:border-black";
