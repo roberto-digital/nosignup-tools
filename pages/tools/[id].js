@@ -243,5 +243,6 @@ export async function getStaticProps({ params }) {
     props: {
       toolData: minifyRecords(toolData)[0],
     },
+    revalidate: 60,
   };
 }
