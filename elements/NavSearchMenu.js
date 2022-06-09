@@ -13,7 +13,7 @@ function NavSearchMenu() {
   const router = useRouter();
 
   return (
-    <nav className="sticky top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-purple z-50">
+    <nav className="sticky mx-auto top-0 flex flex-col sm:flex-row sm:h-20 px-6 border-b border-gray-300 bg-purple z-50">
       <div className="h-20 w-full flex items-center justify-between sm:h-auto ">
         <a
           href="https://nosignup.tools"
@@ -32,7 +32,7 @@ function NavSearchMenu() {
         </div>
       </div>
       {router.pathname === "/" && (
-        <div className="w-full mx-auto mt-2 mb-4 sm:mx-0 sm:mb-0 sm:mt-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:w-1/2 sm:h-full justify-center items-center block sm:flex">
+        <div className="mt-2 mb-4 sm:mx-0 sm:mb-0 sm:mt-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:w-1/2 sm:h-full justify-center items-center block sm:flex">
           <form className="relative w-full">
             <input
               type="search"
