@@ -172,13 +172,13 @@ function ToolSearch({ initialTools, initialCategories }) {
           <div className="flex-1 lg:pl-12 py-6 px-6 lg:px-0">
             <div className="mt-12">
               <h1 className="text-3xl text-gray-900 leading-snug lg:text-5xl text-center font-black">
-                The Best Free No-Signup Tools
+                Handpicked, no-signup tools
                 <br />
-                Delivered to Your Inbox
+                ready to use in 10 seconds.
               </h1>
               <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
-                Get a monthly curated email of the best free web apps that
-                don&apos;t require registration or login. <span>📩</span>
+                Join thousands of product enthusiasts and get the best no-signup
+                tools delivered to your inbox, once a month. <span>📩</span>
               </h3>
               <NewsletterForm />
               <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
