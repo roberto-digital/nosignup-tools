@@ -108,6 +108,7 @@ const ToolsProvider = ({ children }) => {
   // Handle free text search
   const handleSearchQuery = (e) => {
     e.preventDefault();
+    resetToPageOne();
     const value = e.target.value;
     const trimmedSearch = value.trim().replace(/" "/g, "");
     setFilter((prevState) => {
