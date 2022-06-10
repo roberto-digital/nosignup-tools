@@ -64,10 +64,6 @@ export default function Tool({ toolData }) {
           content={`${toolData.fields.name} - No-Signup Tools`}
           key="title"
         />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        ></meta>
 
         <meta name="description" content={`${toolData.fields.description}`} />
 
