@@ -45,7 +45,7 @@ const NewsletterForm = () => {
           </button>
         </form>
         <p className="mt-3 mx-auto text-center max-w-lg text-[15px] text-gray-400">
-          We never send spam and you can unsubscribe instantly with one click.
+          No spam ever. Unsubscribe with one click.
         </p>
         {state === "ERROR" && (
           <p className="mt-2 text-center text-red-500">{errorMessage}</p>
