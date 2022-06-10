@@ -1,7 +1,9 @@
-# Block all crawlers for /api
-User-agent: *
-Disallow: /api
-
-# Allow all crawlers
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://nosignup.tools
+
+# Sitemaps
+Sitemap: https://nosignup.tools/sitemap.xml
