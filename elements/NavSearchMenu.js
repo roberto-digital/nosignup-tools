@@ -23,7 +23,7 @@ function NavSearchMenu() {
             nosignup.tools
           </a>
           {router.pathname === "/" && (
-            <div className="mt-2 hidden mb-4 sm:mx-0 sm:mb-0 sm:mt-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:w-1/2 sm:h-full justify-center items-center block sm:flex">
+            <div className="mt-2 hidden lg:flex mb-4 sm:mx-0 sm:mb-0 sm:mt-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:w-1/2 sm:h-full justify-center items-center block ">
               <form className="relative w-full">
                 <input
                   type="search"
