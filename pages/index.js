@@ -177,8 +177,8 @@ function ToolSearch({ initialTools, initialCategories }) {
                 you can use in 10 seconds
               </h1>
               <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
-                Nosignup.tools is a curated collection of web-based products
-                that don't require an account or registration. <br />
+                nosignup.tools is a curated collection of web-based products
+                that don&apos;t require an account or registration. <br />
                 Join thousands of product enthusiasts who get our monthly
                 update, for free <span>📩</span>
               </h3>
