@@ -172,9 +172,9 @@ function ToolSearch({ initialTools, initialCategories }) {
           <div className="flex-1 lg:pl-12 py-6 px-6 lg:px-0">
             <div className="mt-12">
               <h1 className="text-3xl text-gray-900  leading-tight md:leading-snug lg:text-5xl text-center font-black">
-                Handpicked, no-signup tools
+                Handpicked no-signup tools
                 <br />
-                ready to use in 10 seconds.
+                you can use in 10 seconds
               </h1>
               <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
                 Join thousands of product enthusiasts who get our monthly
