@@ -15,10 +15,10 @@ function NavSearchMenu() {
   return (
     <nav className="w-full top-0 bg-purple z-50">
       <div className="container mx-auto sticky flex flex-col w-full align-center">
-        <div className="w-auto block flex items-center justify-between md:h-20 ">
+        <div className="w-auto block flex items-center justify-center xl:justify-between sm:h-10 md:h-20 ">
           <a
             href="https://nosignup.tools"
-            className="no-underline text-white font-bold ml-3 text-xl xl:text-2xl"
+            className="no-underline text-white block font-bold ml-3 text-xl xl:text-2xl"
           >
             nosignup.tools
           </a>
@@ -38,7 +38,7 @@ function NavSearchMenu() {
               </form>
             </div>
           )}
-          <div className="w-auto">
+          <div className="w-auto hidden lg:block">
             <Button
               type="outline"
               text="List a tool"
