@@ -171,7 +171,7 @@ function ToolSearch({ initialTools, initialCategories }) {
         {AllTools.length > 0 ? (
           <div className="flex-1 lg:pl-12 py-6 px-6 lg:px-0">
             <div className="mt-12">
-              <h1 className="text-3xl text-gray-900 leading-snug lg:text-5xl text-center font-black">
+              <h1 className="text-3xl text-gray-900  leading-tight md:leading-snug lg:text-5xl text-center font-black">
                 Handpicked, no-signup tools
                 <br />
                 ready to use in 10 seconds.
