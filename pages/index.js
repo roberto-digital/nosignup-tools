@@ -135,7 +135,7 @@ function ToolSearch({ initialTools, initialCategories }) {
   return (
     <>
       <Head>
-        <title>No Signup Tools</title>
+        <title>No-Signup Tools</title>
         <meta property="og:title" content="No-Signup Tools" key="title" />
         <meta
           name="viewport"
@@ -152,7 +152,7 @@ function ToolSearch({ initialTools, initialCategories }) {
         <meta property="og:title" content="No-Signup Tools" />
         <meta
           property="og:description"
-          content="Free web apps that don't require registration or login"
+          content="Disover the greatest curated collection of free web apps and tools that don't require registration or login"
         />
         <meta property="og:image" content="/images/nosignup_tools.jpeg" />
 
