@@ -15,7 +15,7 @@ function NavSearchMenu() {
   return (
     <nav className="w-full top-0 bg-purple z-50">
       <div className="container mx-auto sticky flex flex-col w-full align-center">
-        <div className="w-auto block flex items-center justify-center xl:justify-between sm:h-10 md:h-20 ">
+        <div className="w-auto block flex items-center justify-center lg:justify-between h-20 md:h-20 ">
           <a
             href="https://nosignup.tools"
             className="no-underline text-white block font-bold ml-3 text-xl xl:text-2xl"
@@ -23,7 +23,7 @@ function NavSearchMenu() {
             nosignup.tools
           </a>
           {router.pathname === "/" && (
-            <div className="mt-2 hidden lg:flex mb-4 sm:mx-0 sm:mb-0 sm:mt-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:w-1/2 sm:h-full justify-center items-center block ">
+            <div className="mt-2 hidden lg:flex mb-4 sm:mx-0 sm:mb-0 sm:mt-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:w-1/2 sm:h-full justify-center items-center">
               <form className="relative w-full">
                 <input
                   type="search"
