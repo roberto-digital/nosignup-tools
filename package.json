@@ -17,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.1.18",
     "airtable": "^0.11.4",
     "axios": "^0.27.2",
+    "nanoid": "^4.0.0",
     "next": "12.1.6",
     "next-plausible": "^3.1.9",
     "next-sitemap": "^3.0.5",

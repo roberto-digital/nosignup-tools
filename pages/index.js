@@ -27,9 +27,7 @@ function ToolSearch({ initialTools, initialCategories }) {
     setCategories,
     addFav,
     favourites,
-    setFavourites,
     removeFav,
-    filter,
   } = useContext(ToolsContext);
 
   useEffect(() => {
@@ -179,8 +177,8 @@ function ToolSearch({ initialTools, initialCategories }) {
               <h3 className="text-md text-gray-900 lg:text-2xl text-center font-light mt-4">
                 nosignup.tools is a curated collection of web-based products
                 that don&apos;t require an account or registration. <br />
-                Join thousands of product enthusiasts who get our monthly
-                update, for free <span>📩</span>
+                Join other product enthusiasts who get our monthly update, for
+                free <span>📩</span>
               </h3>
               <NewsletterForm />
               <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">

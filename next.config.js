@@ -7,6 +7,10 @@ const nextConfig = withPlausibleProxy()({
   images: {
     domains: ["dl.airtable.com"],
   },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 });
 
 module.exports = nextConfig;
