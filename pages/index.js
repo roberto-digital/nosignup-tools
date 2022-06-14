@@ -173,6 +173,7 @@ function ToolSearch({ initialTools, initialCategories }) {
                 <a
                   href="https://www.producthunt.com/posts/nosignup-tools?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-nosignup&#0045;tools"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img
                     src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=349279&theme=light"
