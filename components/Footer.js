@@ -27,6 +27,7 @@ export default function Footer() {
             className="mx-3 text-white bg-yellow sm:mt-0 mt-4 hover:underline"
             href="https://www.buymeacoffee.com/cpleiser"
             target="_blank"
+            rel="noreferrer"
           >
             <span>☕ </span>
             Buy me a coffee
