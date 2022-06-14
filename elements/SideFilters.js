@@ -80,7 +80,7 @@ function SideFilters() {
               className="flex items-center justify-between cursor-pointer"
               onClick={() => setCategoryOpen(!categoryOpen)}
             >
-              <h5 className="text-sm font-bold">Category</h5>
+              <h5 className="text-sm font-bold">Filter by category</h5>
               <FontAwesomeIcon
                 icon={categoryOpen ? faChevronUp : faChevronDown}
                 className="text-gray-400 text-base"

@@ -6,6 +6,7 @@ const ToolsProvider = ({ children }) => {
   const initialFavourites = [];
   const [tools, setTools] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [checkedBoxes, setCheckedBoxes] = useState([]);
   const [categories, setCategories] = useState([]);
   const [favourites, setFavourites] = useState(initialFavourites);
 
@@ -108,7 +109,7 @@ const ToolsProvider = ({ children }) => {
   // Handle free text search
   const handleSearchQuery = (e) => {
     e.preventDefault();
-    resetToPageOne();
+    // resetToPageOne();
     const value = e.target.value;
     const trimmedSearch = value.trim().replace(/" "/g, "");
     setFilter((prevState) => {

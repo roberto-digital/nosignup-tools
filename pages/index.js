@@ -169,6 +169,19 @@ function ToolSearch({ initialTools, initialCategories }) {
         {AllTools.length > 0 ? (
           <div className="flex-1 lg:pl-12 py-6 px-6 lg:px-0">
             <div className="mt-12">
+              <div className="flex justify-center mb-5">
+                <a
+                  href="https://www.producthunt.com/posts/nosignup-tools?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-nosignup&#0045;tools"
+                  target="_blank"
+                >
+                  <img
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=349279&theme=light"
+                    alt="nosignup&#0046;tools - Free&#0032;web&#0032;apps&#0032;that&#0032;don&#0039;t&#0032;require&#0032;signup | Product Hunt"
+                    width="250"
+                    height="54"
+                  />
+                </a>
+              </div>
               <h1 className="text-3xl text-gray-900  leading-tight md:leading-snug lg:text-5xl text-center font-black">
                 Handpicked no-signup tools
                 <br />

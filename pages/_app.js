@@ -16,23 +16,17 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Layout>
         <Script
-          src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-          data-name="BMC-Widget"
-          data-cfasync="false"
-          data-id="cpleiser"
-          data-description="Support me on Buy me a coffee!"
-          data-message=""
+          src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+          data-name="bmc-button"
+          data-slug="cpleiser"
           data-color="#FFDD00"
-          data-position="Right"
-          data-x_margin="18"
-          data-y_margin="18"
+          data-emoji=""
+          data-font="Cookie"
+          data-text="Buy me a coffee"
+          data-outline-color="#000000"
+          data-font-color="#000000"
+          data-coffee-color="#ffffff"
           strategy="beforeInteractive"
-          onLoad={() => {
-            console.log("BMAC script loaded");
-          }}
-          onError={(e) => {
-            console.error("Script failed to load", e);
-          }}
         />
         <Script src="https://tally.so/widgets/embed.js" />
       </ToolsProvider>
