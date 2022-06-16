@@ -116,6 +116,7 @@ const ToolsProvider = ({ children }) => {
         textSearch: trimmedSearch,
       };
     });
+    resetToPageOne();
   };
 
   const refreshTools = async () => {
