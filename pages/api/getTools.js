@@ -1,11 +1,15 @@
 import { table, minifyRecords } from "./utils/Airtable";
 
 export default async (req, res) => {
+  let recordsArray = [];
   try {
-    const records = await table
+    await table
       .select({ sort: [{ field: "created", direction: "desc" }] })
-      .firstPage();
-    const minifiedRecords = minifyRecords(records);
+      .eachPage((records, fetchNextPage) => {
+        recordsArray = [...recordsArray, ...records];
+        fetchNextPage();
+      });
+    const minifiedRecords = minifyRecords(recordsArray);
     res.statusCode = 200;
     res.json(minifiedRecords);
   } catch (err) {

@@ -6,7 +6,6 @@ const ToolsProvider = ({ children }) => {
   const initialFavourites = [];
   const [tools, setTools] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [checkedBoxes, setCheckedBoxes] = useState([]);
   const [categories, setCategories] = useState([]);
   const [favourites, setFavourites] = useState(initialFavourites);
 
@@ -15,7 +14,7 @@ const ToolsProvider = ({ children }) => {
     total: tools?.length,
     start: 0,
     page: 1,
-    perPage: 10,
+    perPage: 12,
     showPrevButton: false,
     showFirstPageButton: false,
     showNextButton: false,
@@ -109,7 +108,6 @@ const ToolsProvider = ({ children }) => {
   // Handle free text search
   const handleSearchQuery = (e) => {
     e.preventDefault();
-    // resetToPageOne();
     const value = e.target.value;
     const trimmedSearch = value.trim().replace(/" "/g, "");
     setFilter((prevState) => {
@@ -160,9 +158,6 @@ const ToolsProvider = ({ children }) => {
     }
     if (sortFilter == "featured-sort") {
       result = result.sort((a, b) => b.fields.featured - a.fields.featured);
-    }
-    if (sortFilter == "latest-sort") {
-      result = tools;
     }
     return result;
   };

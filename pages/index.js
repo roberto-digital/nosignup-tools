@@ -225,16 +225,20 @@ function ToolSearch({ initialTools, initialCategories }) {
 }
 
 export async function getStaticProps() {
+  let recordsArray = [];
   try {
-    const tools = await table
+    await table
       .select({ sort: [{ field: "featured", direction: "desc" }] })
-      .firstPage();
-    const initialCategories = tools
+      .eachPage((records, fetchNextPage) => {
+        recordsArray = [...recordsArray, ...records];
+        fetchNextPage();
+      });
+    const initialCategories = recordsArray
       .map((tool) => tool.fields.category)
       .filter((value, index, self) => self.indexOf(value) === index);
     return {
       props: {
-        initialTools: minifyRecords(tools),
+        initialTools: minifyRecords(recordsArray),
         initialCategories,
       },
       revalidate: 60,
