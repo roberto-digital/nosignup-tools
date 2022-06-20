@@ -152,7 +152,10 @@ function ToolSearch({ initialTools, initialCategories }) {
           property="og:description"
           content="Disover the greatest curated collection of free web apps and tools that don't require registration or login"
         />
-        <meta property="og:image" content="/images/nosignup_tools.jpeg" />
+        <meta
+          property="og:image"
+          content="https://nosignup.tools/images/nosignup_tools.jpeg"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nosignup.tools" />
@@ -162,7 +165,10 @@ function ToolSearch({ initialTools, initialCategories }) {
           name="twitter:description"
           content="Free web apps that don't require registration or login"
         />
-        <meta name="twitter:image" content="/images/nosignup_tools.jpeg" />
+        <meta
+          name="twitter:image"
+          content="https://nosignup.tools/images/nosignup_tools.jpeg"
+        />
       </Head>
       <div className="flex flex-col lg:flex-row lg:px-6">
         <SideFilters />
