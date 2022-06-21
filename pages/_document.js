@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -11,6 +12,11 @@ export default function Document() {
         <meta
           name="google-site-verification"
           content="2TMhWdzAQnM28WJEhoGRCh3daVck9lhUSIYbiCAdvq0"
+        />
+        <Script
+          async="true"
+          strategy="beforeInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8386642151048084"
         />
       </Head>
       <body>

@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import Head from "next/head";
+import Script from "next/script";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
