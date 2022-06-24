@@ -13,11 +13,6 @@ export default function Document() {
           name="google-site-verification"
           content="2TMhWdzAQnM28WJEhoGRCh3daVck9lhUSIYbiCAdvq0"
         />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8386642151048084"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
       <body>
         <Main />

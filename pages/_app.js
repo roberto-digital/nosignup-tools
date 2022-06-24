@@ -16,6 +16,11 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Layout>
         <Script src="https://tally.so/widgets/embed.js" />
+        <Script
+          async
+          src="//cdn.carbonads.com/carbon.js?serve=CEAIV23N&placement=wwwnosignuptools"
+          id="_carbonads_js"
+        />
       </ToolsProvider>
     </PlausibleProvider>
   );
