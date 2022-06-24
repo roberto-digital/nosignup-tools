@@ -1,6 +1,7 @@
 import Script from "next/script";
 
 import "../styles/globals.css";
+import "../styles/carbonads.css";
 import PlausibleProvider from "next-plausible";
 import { ToolsProvider } from "../contexts/ToolsContext";
 import Layout from "../components/Layout";
