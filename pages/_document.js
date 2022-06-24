@@ -17,12 +17,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script
-          async
-          type="text/javascript"
-          src="//cdn.carbonads.com/carbon.js?serve=CEAIV23N&placement=wwwnosignuptools"
-          id="_carbonads_js"
-        ></script>
       </body>
     </Html>
   );
