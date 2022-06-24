@@ -13,11 +13,13 @@ export default function Document() {
           name="google-site-verification"
           content="2TMhWdzAQnM28WJEhoGRCh3daVck9lhUSIYbiCAdvq0"
         />
+
         <script
           async
+          type="text/javascript"
           src="//cdn.carbonads.com/carbon.js?serve=CEAIV23N&placement=wwwnosignuptools"
           id="_carbonads_js"
-        />
+        ></script>
       </Head>
       <body>
         <Main />
