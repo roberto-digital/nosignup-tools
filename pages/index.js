@@ -246,7 +246,7 @@ export async function getStaticProps() {
     return {
       props: {
         initialTools: minifyRecords(recordsArray),
-        initialCategories,
+        initialCategories: initialCategories || null,
       },
       revalidate: 60,
     };
